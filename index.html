@@ -11,78 +11,96 @@
 
 <body>
   <section class="hero">
-    <div class="hero-patch-small"></div>
+    <div class="bg-grid"></div>
+    <div class="hero-patch-small p1"></div>
+    <div class="hero-patch-small p2"></div>
+    <div class="hero-patch-small p3"></div>
+    <div class="hero-patch-small p4"></div>
+    <div class="hero-patch-small p5 rect"></div>
+    <div class="hero-patch-small p6 rect"></div>
+    <div class="hero-patch-small p7"></div>
+    <div class="hero-patch-small p8 rect"></div>
 
     <div class="wheel-gallery">
       <div class="gallery">
-        <div class="img-wrapper active"
+        <div class="img-wrapper active" data-title="Biko One"
           data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
           <img src="1.jpg" alt="Biko 1">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Matrix"
           data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad.">
           <img src="2.jpg" alt="Biko 2">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Swift"
           data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos.">
           <img src="3.jpg" alt="Biko 3">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Neo"
           data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema.">
           <img src="4.jpg" alt="Biko 4">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Custom"
           data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort.">
           <img src="5.jpg" alt="Biko 5">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Pure"
           data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente.">
-          <img src="6.jpg" alt="Biko 6">
+          <img src="6.png" alt="Biko 6">
         </div>
-        <div class="img-wrapper" data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles.">
-          <img src="7.jpg" alt="Biko 7">
+        <div class="img-wrapper" data-title="Biko Weld"
+          data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles.">
+          <img src="7.png" alt="Biko 7">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Precision"
           data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre.">
           <img src="8.webp" alt="Biko 8">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Urban"
           data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano.">
           <img src="9.webp" alt="Biko 9">
         </div>
-        <div class="img-wrapper"
+        <div class="img-wrapper" data-title="Biko Special"
           data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas.">
           <img src="10.webp" alt="Biko 10">
         </div>
-        <div class="img-wrapper" data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes.">
+        <div class="img-wrapper" data-title="Biko Extreme"
+          data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes.">
           <img src="11.webp" alt="Biko 11">
         </div>
-        <div class="img-wrapper" data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única.">
-          <img src="12.webp" alt="Biko 12">
+        <div class="img-wrapper" data-title="Biko Future"
+          data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única.">
+          <img src="12.jpg" alt="Biko 12">
+        </div>
+        <div class="img-wrapper" data-title="Biko Legacy"
+          data-desc="Cada Biko es una obra de arte funcional diseñada para durar.">
+          <img src="13.jpg" alt="Biko 13">
         </div>
       </div>
 
-      <!-- Botones de Navegación -->
-      <div class="nav-buttons">
-        <button id="prevBtn" class="nav-btn" aria-label="Anterior">
-          <svg viewBox="0 0 24 24">
-            <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
-          </svg>
-        </button>
-        <button id="nextBtn" class="nav-btn" aria-label="Siguiente">
-          <svg viewBox="0 0 24 24">
-            <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-          </svg>
-        </button>
-      </div>
+      <!-- La galería sigue igual -->
     </div>
 
     <div class="hero-content">
       <div class="info">
+        <h2 class="item-title" id="main-title">Biko One</h2>
         <p class="description" id="main-description">
           Bicicleta experimental con estructura reforzada, diseño urbano y
           geometría personalizada para alto rendimiento.
         </p>
+
+        <!-- Botones de Navegación ahora dentro de info -->
+        <div class="nav-buttons">
+          <button id="prevBtn" class="nav-btn" aria-label="Anterior">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+            </svg>
+          </button>
+          <button id="nextBtn" class="nav-btn" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -106,8 +124,181 @@
 
   </section>
 
+  <section class="services" id="services">
+    <div class="service-patch sp1"></div>
+    <div class="service-patch sp2 rect"></div>
+    <div class="service-patch sp3"></div>
+
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">Nuestros Servicios</span>
+        <h2 class="section-title">Soluciones para <span>Dos Ruedas</span></h2>
+        <div class="glow-line"></div>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1: Armado -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M19.77,5.03L12.14,12.66l-2.12-2.12l7.63-7.63c1.17-1.17,3.07-1.17,4.24,0c1.17,1.17,1.17,3.07,0,4.24L19.77,5.03z M15.1,19.24L12.98,17.12l-5.66,5.66c-1.17,1.17-3.07,1.17-4.24,0c-1.17-1.17-1.17-3.07,0-4.24l5.66-5.66L6.61,10.76L11.56,5.8l7.07,7.07l-3.54,3.54L15.1,19.24z" />
+            </svg>
+          </div>
+          <h3>Armado Experto</h3>
+          <p>¿Compraste tu bici online? La armamos con precisión milimétrica, ajustando cada tornillo para tu seguridad.
+          </p>
+        </div>
+
+        <!-- Servicio 2: Mantenimiento -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.46C14.44,2.22 14.23,2.05 14,2.05H10C9.77,2.05 9.56,2.22 9.53,2.46L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.88L9.53,21.54C9.56,21.78 9.77,21.95 10,21.95H14C14.23,21.95 14.44,21.78 14.47,21.54L14.86,18.88C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+            </svg>
+          </div>
+          <h3>Mantenimiento Base</h3>
+          <p>Limpieza profesional, parches de alta durabilidad y ajuste de frenos para que tu viaje nunca se detenga.
+          </p>
+        </div>
+
+        <!-- Servicio 3: Upgrades -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M13,2V5.67L15.22,4.89L15.93,6.31L13.72,7.09L15.31,10.27L14.06,12.44L11.83,8L9.44,12.78L8.23,10.36L10.25,6.32L11.66,7.74L12.42,5.55L10.22,6.33L9.5,4.91L11.72,4.13V2H13M12,13A4,4 0 0,1 16,17A4,4 0 0,1 12,21A4,4 0 0,1 8,17A4,4 0 0,1 12,13M12,14.5A2.5,2.5 0 0,0 9.5,17A2.5,2.5 0 0,0 12,19.5A2.5,2.5 0 0,0 14.5,17A2.5,2.5 0 0,0 12,14.5Z" />
+            </svg>
+          </div>
+          <h3>Performance Upgrades</h3>
+          <p>Cambio de bujes y rayos reforzados. Optimizamos tu estructura actual para que dure años más, ahorrándote
+            una bici nueva.</p>
+        </div>
+
+        <!-- Servicio 4: Invención (Especial) -->
+        <div class="service-card featured">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+            </svg>
+          </div>
+          <h3>Laboratorio Inventor</h3>
+          <p>Bicicletas dobles, triples o prototipos únicos. Si puedes imaginarlo, en Biko lo construimos desde cero.
+          </p>
+          <div class="tag">Exclusivo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle">Galería de Detalles</span>
+        <h2 class="section-title">Nuestras <span>Creaciones</span></h2>
+        <div class="glow-line"></div>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-title="Biko One"
+          data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento."
+          data-img="1.jpg">
+          <img src="1.jpg" alt="Detalle 1">
+          <div class="overlay"><span>Vista Técnica 01</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Matrix"
+          data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad."
+          data-img="2.jpg">
+          <img src="2.jpg" alt="Detalle 2">
+          <div class="overlay"><span>Vista Técnica 02</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Swift"
+          data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos."
+          data-img="3.jpg">
+          <img src="3.jpg" alt="Detalle 3">
+          <div class="overlay"><span>Vista Técnica 03</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Neo"
+          data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema."
+          data-img="4.jpg">
+          <img src="4.jpg" alt="Detalle 4">
+          <div class="overlay"><span>Vista Técnica 04</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Custom"
+          data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort."
+          data-img="5.jpg">
+          <img src="5.jpg" alt="Detalle 5">
+          <div class="overlay"><span>Vista Técnica 05</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Pure"
+          data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente."
+          data-img="6.png">
+          <img src="6.png" alt="Detalle 6">
+          <div class="overlay"><span>Vista Técnica 06</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Weld"
+          data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles." data-img="7.png">
+          <img src="7.png" alt="Detalle 7">
+          <div class="overlay"><span>Vista Técnica 07</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Precision"
+          data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre." data-img="8.webp">
+          <img src="8.webp" alt="Detalle 8">
+          <div class="overlay"><span>Vista Técnica 08</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Urban"
+          data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano." data-img="9.webp">
+          <img src="9.webp" alt="Detalle 9">
+          <div class="overlay"><span>Vista Técnica 09</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Special"
+          data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas."
+          data-img="10.webp">
+          <img src="10.webp" alt="Detalle 10">
+          <div class="overlay"><span>Vista Técnica 10</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Extreme"
+          data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes." data-img="11.webp">
+          <img src="11.webp" alt="Detalle 11">
+          <div class="overlay"><span>Vista Técnica 11</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Future"
+          data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única." data-img="12.jpg">
+          <img src="12.jpg" alt="Detalle 12">
+          <div class="overlay"><span>Vista Técnica 12</span></div>
+        </div>
+        <div class="portfolio-item" data-title="Biko Legacy"
+          data-desc="Cada Biko es una obra de arte funcional diseñada para durar." data-img="13.jpg">
+          <img src="13.jpg" alt="Detalle 13">
+          <div class="overlay"><span>Vista Técnica 13</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para detalles de la galería -->
+  <div id="itemModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img">
+          <img id="modalImg" src="" alt="Detalle">
+        </div>
+        <div class="modal-info">
+          <h2 id="modalTitle">Título</h2>
+          <div class="glow-line"></div>
+          <p id="modalDesc">Descripción detallada</p>
+          <a href="#" class="modal-btn">Consultar por esta Biko</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const wrappers = document.querySelectorAll('.img-wrapper');
+    const mainTitle = document.getElementById('main-title');
     const descText = document.getElementById('main-description');
     const nextBtn = document.getElementById('nextBtn');
     const prevBtn = document.getElementById('prevBtn');
@@ -122,10 +313,14 @@
       currentIndex = (index + wrappers.length) % wrappers.length;
       wrappers[currentIndex].classList.add('active');
 
-      // Update description with a small fade effect
+      // Update content with a small fade effect
+      mainTitle.style.opacity = 0;
       descText.style.opacity = 0;
+
       setTimeout(() => {
+        mainTitle.textContent = wrappers[currentIndex].getAttribute('data-title');
         descText.textContent = wrappers[currentIndex].getAttribute('data-desc');
+        mainTitle.style.opacity = 1;
         descText.style.opacity = 1;
       }, 300);
     }
@@ -155,6 +350,42 @@
     prevBtn.addEventListener('click', () => {
       prevSlide();
       startAutoPlay(); // Reset timer
+    });
+
+    // Modal Logic
+    const modal = document.getElementById('itemModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const closeModal = document.querySelector('.close-modal');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const title = item.getAttribute('data-title');
+        const desc = item.getAttribute('data-desc');
+        const img = item.getAttribute('data-img');
+
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        modalImg.src = img;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scroll
+    });
+
+    // Close on click outside content
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
 
     // Start
