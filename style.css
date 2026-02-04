@@ -1,5 +1,5 @@
   :root {
-    --primary: #ff7a00;
+    --primary: #d8d36a;
     --primary-glow: rgba(255, 122, 0, 0.4);
     --bg-dark: #121212;
     --bg-card: rgba(255, 255, 255, 0.03);
@@ -97,7 +97,7 @@
   .blog-patch::before {
     content: '';
     position: absolute;
-    inset: 15%;
+    inset: 10%;
     /* Espacio para el borde circular naranja exterior */
     background: #000;
     clip-path: var(--flower-shape);
@@ -449,6 +449,10 @@
     text-transform: uppercase;
     letter-spacing: -1px;
     opacity: 0.9;
+  }
+
+  .title span {
+    color: var(--primary);
   }
 
   .glow-line {
