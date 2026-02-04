@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biko Inventor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-patch-small"></div>
+
+    <div class="wheel-gallery">
+      <div class="gallery">
+        <div class="img-wrapper active"
+          data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
+          <img src="1.jpg" alt="Biko 1">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad.">
+          <img src="2.jpg" alt="Biko 2">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos.">
+          <img src="3.jpg" alt="Biko 3">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema.">
+          <img src="4.jpg" alt="Biko 4">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort.">
+          <img src="5.jpg" alt="Biko 5">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente.">
+          <img src="6.jpg" alt="Biko 6">
+        </div>
+        <div class="img-wrapper" data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles.">
+          <img src="7.jpg" alt="Biko 7">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre.">
+          <img src="8.webp" alt="Biko 8">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano.">
+          <img src="9.webp" alt="Biko 9">
+        </div>
+        <div class="img-wrapper"
+          data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas.">
+          <img src="10.webp" alt="Biko 10">
+        </div>
+        <div class="img-wrapper" data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes.">
+          <img src="11.webp" alt="Biko 11">
+        </div>
+        <div class="img-wrapper" data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única.">
+          <img src="12.webp" alt="Biko 12">
+        </div>
+      </div>
+
+      <!-- Botones de Navegación -->
+      <div class="nav-buttons">
+        <button id="prevBtn" class="nav-btn" aria-label="Anterior">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+          </svg>
+        </button>
+        <button id="nextBtn" class="nav-btn" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="info">
+        <p class="description" id="main-description">
+          Bicicleta experimental con estructura reforzada, diseño urbano y
+          geometría personalizada para alto rendimiento.
+        </p>
+      </div>
+    </div>
+
+    <div class="floating-footer">
+      <h1 class="title">Biko <span>Inventor</span></h1>
+      <div class="social-links">
+        <a href="#" class="social-icon whatsapp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const wrappers = document.querySelectorAll('.img-wrapper');
+    const descText = document.getElementById('main-description');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    function updateGallery(index) {
+      // Remove active from all
+      wrappers.forEach(w => w.classList.remove('active'));
+
+      // Set new active
+      currentIndex = (index + wrappers.length) % wrappers.length;
+      wrappers[currentIndex].classList.add('active');
+
+      // Update description with a small fade effect
+      descText.style.opacity = 0;
+      setTimeout(() => {
+        descText.textContent = wrappers[currentIndex].getAttribute('data-desc');
+        descText.style.opacity = 1;
+      }, 300);
+    }
+
+    function nextSlide() {
+      updateGallery(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      updateGallery(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoPlay(); // Reset timer
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoPlay(); // Reset timer
+    });
+
+    // Start
+    startAutoPlay();
+  </script>
+</body>
+
+</html>
