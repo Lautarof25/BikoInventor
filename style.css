@@ -7,6 +7,7 @@
     --text-dim: #a0a0a0;
     --wheel-size: clamp(450px, 70vw, 850px);
     --wheel-offset: calc(var(--wheel-size) * -0.25);
+    --flower-shape: polygon(100% 50%, 86.7% 59.8%, 93.3% 75%, 76.9% 76.9%, 75% 93.3%, 59.8% 86.7%, 50% 100%, 40.2% 86.7%, 25% 93.3%, 23.1% 76.9%, 6.7% 75%, 13.3% 59.8%, 0% 50%, 13.3% 40.2%, 6.7% 25%, 23.1% 23.1%, 25% 6.7%, 40.2% 13.3%, 50% 0%, 59.8% 13.3%, 75% 6.7%, 76.9% 23.1%, 93.3% 25%, 86.7% 40.2%);
   }
 
   * {
@@ -73,19 +74,42 @@
     z-index: 0;
   }
 
-  /* Decoración extra: Parches masivos flotantes */
-  .hero-patch-small {
+  /* Decoración extra: Parches modo "Kit de Reparación" */
+  .hero-patch-small,
+  .service-patch,
+  .portfolio-patch,
+  .video-patch,
+  .blog-patch {
     position: absolute;
-    background: #000;
-    border: 7px solid var(--primary);
+    background: var(--primary);
     border-radius: 50% !important;
-    /* Forzar redondo */
     opacity: 0.25;
     z-index: 0;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 15px var(--primary-glow);
-    background-image: radial-gradient(circle, rgba(255, 122, 0, 0.2) 0%, transparent 75%);
     animation: float 8s infinite ease-in-out;
     pointer-events: none;
+  }
+
+  .hero-patch-small::before,
+  .service-patch::before,
+  .portfolio-patch::before,
+  .video-patch::before,
+  .blog-patch::before {
+    content: '';
+    position: absolute;
+    inset: 15%;
+    /* Espacio para el borde circular naranja exterior */
+    background: #000;
+    clip-path: var(--flower-shape);
+    background-image:
+      radial-gradient(circle at center, #1a1a1a 0%, #000 70%),
+      repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+    z-index: 1;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .hero-patch-small {
+    /* Mantiene sus propiedades individuales pero hereda la forma */
   }
 
   /* Posiciones y variaciones individuales */
@@ -589,16 +613,7 @@
   }
 
   .service-patch {
-    position: absolute;
-    background: #000;
-    border: 6px solid var(--primary);
-    border-radius: 50% !important;
-    opacity: 0.2;
-    /* Aumentado de 0.08 */
-    z-index: 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 10px var(--primary-glow);
-    animation: float 10s infinite ease-in-out;
-    pointer-events: none;
+    animation-duration: 10s;
   }
 
   .sp1 {
@@ -714,16 +729,7 @@
   }
 
   .portfolio-patch {
-    position: absolute;
-    background: #000;
-    border: 6px solid var(--primary);
-    border-radius: 50% !important;
-    opacity: 0.2;
-    /* Aumentado de 0.08 */
-    z-index: 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 10px var(--primary-glow);
-    animation: float 14s infinite ease-in-out;
-    pointer-events: none;
+    animation-duration: 14s;
   }
 
   .pp1 {
@@ -1129,16 +1135,8 @@
   }
 
   .video-patch {
-    position: absolute;
-    background: #000;
-    border: 6px solid var(--primary);
-    border-radius: 50% !important;
-    opacity: 0.2;
-    /* Aumentado de 0.08 */
-    z-index: 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 10px var(--primary-glow);
-    animation: float 12s infinite ease-in-out;
-    pointer-events: none;
+    /* Heredado del estilo global */
+    animation-duration: 12s;
   }
 
   .vp1 {
@@ -1239,6 +1237,7 @@
       grid-template-columns: 1fr;
     }
   }
+
   /* BLOG SECTION */
   .blog {
     padding: 100px 20px;
@@ -1248,19 +1247,25 @@
   }
 
   .blog-patch {
-    position: absolute;
-    background: #000;
-    border: 5px solid var(--primary);
-    border-radius: 50% !important;
+    /* Heredado del estilo global */
+    animation-duration: 15s;
     opacity: 0.15;
-    z-index: 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 10px var(--primary-glow);
-    animation: float 15s infinite ease-in-out;
-    pointer-events: none;
   }
 
-  .bgp1 { top: 10%; left: -20px; width: 100px; height: 100px; }
-  .bgp2 { bottom: 10%; right: -20px; width: 120px; height: 120px; animation-delay: -5s; }
+  .bgp1 {
+    top: 10%;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .bgp2 {
+    bottom: 10%;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    animation-delay: -5s;
+  }
 
   .blog-grid {
     display: grid;
@@ -1313,7 +1318,7 @@
     font-size: 0.8rem;
     line-height: 1;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
   .date span {
@@ -1365,7 +1370,15 @@
   }
 
   @media (max-width: 768px) {
-    .blog { padding: 60px 20px; }
-    .blog-grid { grid-template-columns: 1fr; }
-    .post-content h3 { font-size: 1.4rem; }
+    .blog {
+      padding: 60px 20px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .post-content h3 {
+      font-size: 1.4rem;
+    }
   }
