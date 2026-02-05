@@ -385,14 +385,29 @@
       <div class="blog-grid">
         <article class="blog-post">
           <div class="post-img">
-            <img src="blog-disability.png" alt="Bici para discapacitados">
+            <img src="biciDiscapacitado.jpg" alt="Bici para discapacitados">
             <div class="date"><span>15</span> ENE</div>
           </div>
           <div class="post-content">
             <h3>Inclusión sobre Ruedas</h3>
-            <p>Diseñamos esta handbike personalizada para devolver la libertad de movimiento. Un reto de ingeniería que
-              combina ergonomía y tracción manual superior.</p>
-            <a href="#" class="read-more">Leer historia</a>
+            <p>Bicicleta que cambia a triciclo desarrollada en el taller <span>biko inventor</span> para una persona pe
+              perdió una
+              pierna. Cuenta con mecanismo para bajar la 3er rueda, una puntera en su pedal y una banda elástica para
+              que sea mas facil sacar el pie y tienda siempre a colocarse arriba y adelante.</p>
+
+            <div class="extended-content">
+              <p>Este proyecto nació de una necesidad real: devolver la autonomía y la alegría de rodar. El mayor
+                desafío técnico fue el equilibrio y la facilidad de montaje.</p>
+              <ul>
+                <li>Tercera rueda retráctil neumática.</li>
+                <li>Sistema de calapiés con liberación rápida.</li>
+                <li>Geometría estabilizada para bajas velocidades.</li>
+              </ul>
+              <p>Hoy, Ariel sigue perfeccionando este diseño para que sea adaptable a diferentes tipos de movilidad
+                reducida.</p>
+            </div>
+
+            <a class="read-more">Leer historia</a>
           </div>
         </article>
 
@@ -405,7 +420,20 @@
             <h3>El Quinteto de Acero</h3>
             <p>¿Es posible que 5 personas pedaleen en sincronía? Construimos esta estructura de 4 metros para demostrar
               que la fuerza colectiva no tiene límites.</p>
-            <a href="#" class="read-more">Leer historia</a>
+
+            <div class="extended-content">
+              <p>La "Biko Quíntuple" es una bestia de ingeniería artesanal. Unir cinco transmisiones en una sola línea
+                de cadena requirió una alineación perfecta de cada eje.</p>
+              <ul>
+                <li>Cuadro de acero reforzado de 4.2 metros.</li>
+                <li>Frenos de disco hidráulicos de alta potencia.</li>
+                <li>Sincronización de pedaleo mediante tensores intermedios.</li>
+              </ul>
+              <p>Fue probada en eventos locales, convirtiéndose en la atracción principal por su diseño único y el
+                trabajo en equipo que exige.</p>
+            </div>
+
+            <a class="read-more">Leer historia</a>
           </div>
         </article>
 
@@ -418,14 +446,25 @@
             <h3>Geometría de lo Imposible</h3>
             <p>La Biko Circular rompe con el diseño tradicional. Un cuadro que es puramente un aro, desafiando las leyes
               de la física y la estética industrial.</p>
-            <a href="#" class="read-more">Leer historia</a>
+
+            <div class="extended-content">
+              <p>Originalmente concebida como una pieza de arte rodante, la Biko Circular terminó siendo
+                sorprendentemente cómoda para paseos urbanos.</p>
+              <ul>
+                <li>Cuadro en forma de círculo perfecto sin tubos rectos.</li>
+                <li>Transmisión integrada en el perímetro inferior.</li>
+                <li>Estética minimalista con soldaduras pulidas.</li>
+              </ul>
+              <p>Es el testimonio de que en el taller Biko Inventor, la función sigue a la imaginación, sin sacrificar
+                la ingeniería.</p>
+            </div>
+
+            <a class="read-more">Leer historia</a>
           </div>
         </article>
       </div>
     </div>
   </section>
-
-
 
   <section class="services" id="services">
     <div class="service-patch sp1"></div>
@@ -477,7 +516,7 @@
                 d="M13,2V5.67L15.22,4.89L15.93,6.31L13.72,7.09L15.31,10.27L14.06,12.44L11.83,8L9.44,12.78L8.23,10.36L10.25,6.32L11.66,7.74L12.42,5.55L10.22,6.33L9.5,4.91L11.72,4.13V2H13M12,13A4,4 0 0,1 16,17A4,4 0 0,1 12,21A4,4 0 0,1 8,17A4,4 0 0,1 12,13M12,14.5A2.5,2.5 0 0,0 9.5,17A2.5,2.5 0 0,0 12,19.5A2.5,2.5 0 0,0 14.5,17A2.5,2.5 0 0,0 12,14.5Z" />
             </svg>
           </div>
-          <h3>Performance Upgrades</h3>
+          <h3>Mejoras</h3>
           <p>Cambio de bujes y rayos reforzados. Optimizamos tu estructura actual para que dure años más, ahorrándote
             una bici nueva.</p>
         </div>
@@ -491,7 +530,7 @@
             </svg>
           </div>
           <h3>Laboratorio Inventor</h3>
-          <p>Bicicletas dobles, triples o prototipos únicos. Si puedes imaginarlo, en Biko lo construimos desde cero.
+          <p>Bicicletas dobles, triples o prototipos únicos. Si podés imaginarlo, en Biko lo construimos desde cero.
           </p>
           <div class="tag">Exclusivo</div>
         </div>
@@ -669,6 +708,24 @@
 
     // Start
     startAutoPlay();
+
+    // Blog Expansion Logic
+    document.querySelectorAll('.read-more').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const post = btn.closest('.blog-post');
+        const isExpanded = post.classList.toggle('expanded');
+
+        btn.textContent = isExpanded ? 'Cerrar historia' : 'Leer historia';
+
+        if (isExpanded) {
+          // Scroll to show the whole content if needed
+          setTimeout(() => {
+            post.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 400);
+        }
+      });
+    });
   </script>
 </body>
 
