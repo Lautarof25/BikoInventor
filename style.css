@@ -782,6 +782,135 @@
     transition: opacity 0.4s ease;
   }
 
+  /* ABOUT SECTION */
+  .about {
+    padding: 100px 20px;
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-patch {
+    animation-duration: 12s;
+    opacity: 0.1;
+  }
+
+  .ap1 {
+    top: 10%;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .ap2 {
+    bottom: 10%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    animation-delay: -3s;
+  }
+
+  .about-card {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-image {
+    flex: 0 0 400px;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.2) contrast(1.1);
+  }
+
+  .about-content {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-text p {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .about-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .about-btn {
+    align-self: flex-start;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 14px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .about-btn:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 10px 20px var(--primary-glow);
+  }
+
+  @media (max-width: 900px) {
+    .about-card {
+      flex-direction: column;
+    }
+
+    .about-image {
+      flex: 0 0 400px;
+    }
+
+    .about-content {
+      padding: 40px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .about-content .glow-line {
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      width: 120px;
+    }
+
+    .about-btn {
+      align-self: center;
+    }
+  }
+
   /* PORTFOLIO GALLERY */
   .portfolio {
     padding: 80px 20px;
