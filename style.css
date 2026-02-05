@@ -468,7 +468,9 @@
     opacity: 0.9;
   }
 
-  .title span {
+  .title span,
+  .video-info span,
+  .about-text span {
     color: var(--primary);
   }
 
@@ -1065,18 +1067,24 @@
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    padding-bottom: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) transparent;
+    padding-bottom: 20px;
+    margin-bottom: -10px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: smooth;
   }
 
   .viewer-thumbnails::-webkit-scrollbar {
-    height: 6px;
+    display: none;
+    /* Chrome, Safari, Opera */
   }
 
-  .viewer-thumbnails::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
+  .viewer-thumbnails:active {
+    cursor: grabbing;
   }
 
   .thumb-item {
@@ -1105,6 +1113,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
   }
 
   @media (max-width: 992px) {
