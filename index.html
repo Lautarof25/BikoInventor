@@ -33,6 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Estilos críticos para evitar FOUC */
     :root {
       --primary: #d8d36a;
       --primary-glow: rgba(255, 251, 0, 0.4);
@@ -42,7 +43,6 @@
       --text-dim: #a0a0a0;
       --wheel-size: clamp(320px, 70vw, 850px);
       --wheel-offset: calc(var(--wheel-size) * -0.25);
-      --flower-shape: polygon(100% 50%, 86.7% 59.8%, 93.3% 75%, 76.9% 76.9%, 75% 93.3%, 59.8% 86.7%, 50% 100%, 40.2% 86.7%, 25% 93.3%, 23.1% 76.9%, 6.7% 75%, 13.3% 59.8%, 0% 50%, 13.3% 40.2%, 6.7% 25%, 23.1% 23.1%, 25% 6.7%, 40.2% 13.3%, 50% 0%, 59.8% 13.3%, 75% 6.7%, 76.9% 23.1%, 93.3% 25%, 86.7% 40.2%);
     }
 
     * {
@@ -50,10 +50,6 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -69,34 +65,7 @@
       align-items: center;
       position: relative;
       background-color: #0d0d0d;
-      background-image:
-        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        radial-gradient(circle at 10% 10%, rgba(255, 122, 0, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 90% 90%, rgba(255, 122, 0, 0.03) 0%, transparent 50%);
-      background-size: 30px 30px, 100% 100%, 100% 100%;
       overflow: hidden;
-    }
-
-    .bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 100px 100px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .hero-patch-small {
-      position: absolute;
-      background: var(--primary);
-      border-radius: 50% !important;
-      opacity: 0.25;
-      z-index: 0;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 15px var(--primary-glow);
-      animation: float 8s infinite ease-in-out;
-      pointer-events: none;
     }
 
     .wheel-gallery {
@@ -106,98 +75,8 @@
       width: var(--wheel-size);
       height: var(--wheel-size);
       border-radius: 50%;
-      border: clamp(25px, 5vw, 55px) solid #111;
       background: #000;
-      box-shadow: 0 0 120px var(--primary-glow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       z-index: 1;
-    }
-
-    .gallery {
-      width: 98%;
-      height: 98%;
-      border-radius: 50%;
-      background: #020202;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gallery .img-wrapper {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: scale(1.15);
-    }
-
-    .gallery .img-wrapper.active {
-      opacity: 1;
-      visibility: visible;
-      transform: scale(1);
-      z-index: 2;
-    }
-
-    .hero-content {
-      margin-left: auto;
-      width: 100%;
-      max-width: 550px;
-      z-index: 10;
-      position: relative;
-      pointer-events: auto;
-      padding: 15px;
-    }
-
-    @media (min-width: 1024px) {
-      .hero-content {
-        margin-left: 40%;
-        max-width: 500px;
-      }
-    }
-
-    .item-title {
-      font-size: clamp(1.8rem, 4.5vw, 3rem);
-      font-weight: 800;
-      color: var(--text-main);
-      text-transform: uppercase;
-      background: linear-gradient(to right, #fff, #999);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .floating-menu {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-
-    .menu-bar {
-      padding: 30px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-
-      33% {
-        transform: translate(10px, -20px) rotate(5deg);
-      }
-
-      66% {
-        transform: translate(-10px, -10px) rotate(-5deg);
-      }
     }
   </style>
 
@@ -213,41 +92,84 @@
 <body>
   <a href="#home" class="skip-link">Saltar al contenido</a>
 
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="svg-tire" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.05)" stroke="var(--primary)" stroke-width="12" />
+    </symbol>
+
+    <symbol id="svg-wheel" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#444" stroke-width="6" />
+      <circle cx="50" cy="50" r="41" fill="none" stroke="var(--primary)" stroke-width="4" />
+      <g stroke="#aaa" stroke-width="1.5">
+        <line x1="50" y1="9" x2="50" y2="91" />
+        <line x1="9" y1="50" x2="91" y2="50" />
+        <line x1="21" y1="21" x2="79" y2="79" />
+        <line x1="79" y1="21" x2="21" y2="79" />
+      </g>
+      <circle cx="50" cy="50" r="5" fill="var(--primary)" />
+    </symbol>
+
+    <symbol id="svg-welder" viewBox="0 0 100 100">
+      <path d="M20 90 L20 45 Q20 40 25 40 L35 40 L35 90 Z" fill="#555" />
+      <path d="M35 55 Q42 55 42 65 Q42 75 35 75" fill="none" stroke="var(--primary)" stroke-width="4"
+        stroke-linecap="round" />
+      <path d="M30 40 L30 25 Q30 15 40 15 L65 15" fill="none" stroke="var(--primary)" stroke-width="8"
+        stroke-linecap="round" />
+      <path d="M65 10 L85 13 L85 17 L65 20 Z" fill="#999" />
+    </symbol>
+  </svg>
+
   <main id="main-content">
     <section class="hero" id="home">
       <div class="bg-grid"></div>
-      <div class="hero-patch-small p1"></div>
-      <div class="hero-patch-small p2"></div>
-      <div class="hero-patch-small p3"></div>
-      <div class="hero-patch-small p4"></div>
-      <div class="hero-patch-small p5"></div>
-      <div class="hero-patch-small p6"></div>
-      <div class="hero-patch-small p7"></div>
-      <div class="hero-patch-small p8"></div>
-      <div class="hero-patch-small p9"></div>
-      <div class="hero-patch-small p10"></div>
-      <div class="hero-patch-small p11"></div>
-      <div class="hero-patch-small p12"></div>
-      <div class="hero-patch-small p13"></div>
-      <div class="hero-patch-small p14"></div>
-      <div class="hero-patch-small p15"></div>
-      <div class="bg-grid" aria-hidden="true"></div>
-      <div class="hero-patch-small p1" aria-hidden="true"></div>
-      <div class="hero-patch-small p2" aria-hidden="true"></div>
-      <div class="hero-patch-small p3" aria-hidden="true"></div>
-      <div class="hero-patch-small p4" aria-hidden="true"></div>
-      <div class="hero-patch-small p5" aria-hidden="true"></div>
-      <div class="hero-patch-small p6" aria-hidden="true"></div>
-      <div class="hero-patch-small p7" aria-hidden="true"></div>
-      <div class="hero-patch-small p8" aria-hidden="true"></div>
-      <div class="hero-patch-small p9" aria-hidden="true"></div>
-      <div class="hero-patch-small p10" aria-hidden="true"></div>
-      <div class="hero-patch-small p11" aria-hidden="true"></div>
-      <div class="hero-patch-small p12" aria-hidden="true"></div>
-      <div class="hero-patch-small p13" aria-hidden="true"></div>
-      <div class="hero-patch-small p14" aria-hidden="true"></div>
-      <div class="hero-patch-small p15" aria-hidden="true"></div>
-      <div class="hero-patch-small p16" aria-hidden="true"></div>
+      <svg class="hero-patch-small p1" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="hero-patch-small p2" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="hero-patch-small p3" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="hero-patch-small p4" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="hero-patch-small p5" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="hero-patch-small p6" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="hero-patch-small p7" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="hero-patch-small p8" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="hero-patch-small p9" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="hero-patch-small p10" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="hero-patch-small p11" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="hero-patch-small p12" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="hero-patch-small p13" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="hero-patch-small p14" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="hero-patch-small p15" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="hero-patch-small p16" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
 
       <div class="wheel-gallery">
         <div class="rivets" aria-hidden="true"></div>
@@ -427,8 +349,12 @@
     </section>
 
     <section class="about" id="about">
-      <div class="about-patch ap1" aria-hidden="true"></div>
-      <div class="about-patch ap2" aria-hidden="true"></div>
+      <svg class="about-patch ap1" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="about-patch ap2" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
       <div class="container">
         <div class="about-card">
           <div class="about-image">
@@ -486,12 +412,24 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-      <div class="portfolio-patch pp1" aria-hidden="true"></div>
-      <div class="portfolio-patch pp2" aria-hidden="true"></div>
-      <div class="portfolio-patch pp3" aria-hidden="true"></div>
-      <div class="portfolio-patch pp4" aria-hidden="true"></div>
-      <div class="portfolio-patch pp5" aria-hidden="true"></div>
-      <div class="portfolio-patch pp6" aria-hidden="true"></div>
+      <svg class="portfolio-patch pp1" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="portfolio-patch pp2" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="portfolio-patch pp3" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="portfolio-patch pp4" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="portfolio-patch pp5" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
+      <svg class="portfolio-patch pp6" aria-hidden="true">
+        <use href="#svg-tire"></use>
+      </svg>
 
       <div class="container">
         <div class="section-header">
@@ -590,10 +528,18 @@
     </section>
 
     <section class="videos" id="videos">
-      <div class="video-patch vp1" aria-hidden="true"></div>
-      <div class="video-patch vp2" aria-hidden="true"></div>
-      <div class="video-patch vp3" aria-hidden="true"></div>
-      <div class="video-patch vp4" aria-hidden="true"></div>
+      <svg class="video-patch vp1" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="video-patch vp2" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="video-patch vp3" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="video-patch vp4" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
 
       <div class="container">
         <div class="section-header">
@@ -678,8 +624,12 @@
     </section>
 
     <section class="blog" id="blog">
-      <div class="blog-patch bgp1" aria-hidden="true"></div>
-      <div class="blog-patch bgp2" aria-hidden="true"></div>
+      <svg class="blog-patch bgp1" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="blog-patch bgp2" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
       <div class="container">
         <div class="section-header">
           <span class="subtitle">Historias de Taller</span>
@@ -776,8 +726,12 @@
     </section>
 
     <section class="workshop" id="workshop">
-      <div class="workshop-patch wp1" aria-hidden="true"></div>
-      <div class="workshop-patch wp2" aria-hidden="true"></div>
+      <svg class="workshop-patch wp1" aria-hidden="true">
+        <use href="#svg-welder"></use>
+      </svg>
+      <svg class="workshop-patch wp2" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
       <div class="container">
         <div class="section-header">
           <span class="subtitle">El Laboratorio</span>
@@ -854,12 +808,24 @@
     </section>
 
     <section class="services" id="services">
-      <div class="service-patch sp1" aria-hidden="true"></div>
-      <div class="service-patch sp2" aria-hidden="true"></div>
-      <div class="service-patch sp3" aria-hidden="true"></div>
-      <div class="service-patch sp4" aria-hidden="true"></div>
-      <div class="service-patch sp5" aria-hidden="true"></div>
-      <div class="service-patch sp6" aria-hidden="true"></div>
+      <svg class="service-patch sp1" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="service-patch sp2" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="service-patch sp3" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="service-patch sp4" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="service-patch sp5" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
+      <svg class="service-patch sp6" aria-hidden="true">
+        <use href="#svg-wheel"></use>
+      </svg>
 
       <div class="container">
         <div class="section-header">
