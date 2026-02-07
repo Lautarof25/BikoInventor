@@ -117,6 +117,34 @@
     filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 5px var(--primary-glow));
     animation: float 8s infinite ease-in-out;
     pointer-events: none;
+    will-change: transform;
+    /* Optimization for hardware acceleration */
+  }
+
+  /* Optimization: Disable floating patches on mobile to save CPU/GPU */
+  @media (max-width: 768px) {
+
+    .hero-patch-small:nth-child(n+5),
+    /* Keep only the first 4 */
+    .service-patch:nth-child(n+3),
+    .portfolio-patch:nth-child(n+3),
+    .video-patch:nth-child(n+3),
+    .blog-patch,
+    .about-patch,
+    .workshop-patch {
+      display: none !important;
+    }
+
+    .hero-patch-small,
+    .service-patch,
+    .portfolio-patch,
+    .video-patch {
+      animation: none !important;
+      /* Static on mobile */
+      filter: none !important;
+      /* No expensive shadows */
+      opacity: 0.15;
+    }
   }
 
 
@@ -306,6 +334,18 @@
     z-index: 1;
     transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.8s ease;
     animation: pulseGlow 4s infinite alternate ease-in-out;
+    will-change: transform, box-shadow;
+  }
+
+  /* Optimization: Simplify wheel gallery for mobile */
+  @media (max-width: 768px) {
+    .wheel-gallery {
+      animation: none !important;
+      /* No pulsing shadow on mobile */
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 40px var(--primary-glow) !important;
+      transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      /* Specific property */
+    }
   }
 
   @media (max-width: 1023px) {
@@ -454,6 +494,16 @@
     position: relative;
     /* Fixed height to ensure buttons NEVER move */
     height: 420px;
+    will-change: transform, opacity;
+  }
+
+  @media (max-width: 768px) {
+    .info {
+      backdrop-filter: none !important;
+      /* Disable expensive blur on mobile */
+      background: rgba(10, 10, 10, 0.95) !important;
+      /* Solid background instead */
+    }
   }
 
   @media (max-width: 1023px) {
@@ -545,7 +595,7 @@
     transform: translateY(120%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
     pointer-events: none;
     padding: 60px 20px;
     display: flex;
@@ -696,8 +746,17 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: var(--text-main);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, background 0.3s ease;
     backdrop-filter: blur(10px);
+  }
+
+  @media (max-width: 768px) {
+
+    .social-icon,
+    .menu-items-container {
+      backdrop-filter: none !important;
+      background: rgba(15, 15, 15, 0.98) !important;
+    }
   }
 
   .social-icon svg {
@@ -1025,6 +1084,14 @@
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .about-card {
+      backdrop-filter: none !important;
+      background: rgba(15, 15, 15, 0.98) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+    }
   }
 
   .about-image {
@@ -1438,6 +1505,14 @@
     padding: 40px;
     backdrop-filter: blur(20px);
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-viewer {
+      backdrop-filter: none !important;
+      background: rgba(15, 15, 15, 0.98) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8) !important;
+    }
   }
 
   .viewer-top {
