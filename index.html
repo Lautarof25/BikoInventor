@@ -27,9 +27,185 @@
   <meta name="twitter:image" content="https://lautarof25.github.io/BikoInventor/og_image.webp">
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --primary: #d8d36a;
+      --primary-glow: rgba(255, 251, 0, 0.4);
+      --bg-dark: #121212;
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --text-main: #ffffff;
+      --text-dim: #a0a0a0;
+      --wheel-size: clamp(320px, 70vw, 850px);
+      --wheel-offset: calc(var(--wheel-size) * -0.25);
+      --flower-shape: polygon(100% 50%, 86.7% 59.8%, 93.3% 75%, 76.9% 76.9%, 75% 93.3%, 59.8% 86.7%, 50% 100%, 40.2% 86.7%, 25% 93.3%, 23.1% 76.9%, 6.7% 75%, 13.3% 59.8%, 0% 50%, 13.3% 40.2%, 6.7% 25%, 23.1% 23.1%, 25% 6.7%, 40.2% 13.3%, 50% 0%, 59.8% 13.3%, 75% 6.7%, 76.9% 23.1%, 93.3% 25%, 86.7% 40.2%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: #0d0d0d;
+      background-image:
+        radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 10% 10%, rgba(255, 122, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(255, 122, 0, 0.03) 0%, transparent 50%);
+      background-size: 30px 30px, 100% 100%, 100% 100%;
+      overflow: hidden;
+    }
+
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100px 100px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-patch-small {
+      position: absolute;
+      background: var(--primary);
+      border-radius: 50% !important;
+      opacity: 0.25;
+      z-index: 0;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 15px var(--primary-glow);
+      animation: float 8s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    .wheel-gallery {
+      position: absolute;
+      top: var(--wheel-offset);
+      left: var(--wheel-offset);
+      width: var(--wheel-size);
+      height: var(--wheel-size);
+      border-radius: 50%;
+      border: clamp(25px, 5vw, 55px) solid #111;
+      background: #000;
+      box-shadow: 0 0 120px var(--primary-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .gallery {
+      width: 98%;
+      height: 98%;
+      border-radius: 50%;
+      background: #020202;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery .img-wrapper {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(1.15);
+    }
+
+    .gallery .img-wrapper.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      z-index: 2;
+    }
+
+    .hero-content {
+      margin-left: auto;
+      width: 100%;
+      max-width: 550px;
+      z-index: 10;
+      position: relative;
+      pointer-events: auto;
+      padding: 15px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content {
+        margin-left: 40%;
+        max-width: 500px;
+      }
+    }
+
+    .item-title {
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 800;
+      color: var(--text-main);
+      text-transform: uppercase;
+      background: linear-gradient(to right, #fff, #999);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .floating-menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      33% {
+        transform: translate(10px, -20px) rotate(5deg);
+      }
+
+      66% {
+        transform: translate(-10px, -10px) rotate(-5deg);
+      }
+    }
+  </style>
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#121212">
   <meta name="theme-color" content="#121212">
 </head>
 
@@ -816,220 +992,8 @@
   </footer>
 
 
-  <script>
-    const wrappers = document.querySelectorAll('.img-wrapper');
-    const mainTitle = document.getElementById('main-title');
-    const descText = document.getElementById('main-description');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    let currentIndex = 0;
-    let autoPlayInterval;
-
-    const heroConsultBtn = document.getElementById('heroConsultBtn');
-    const WHATSAPP_NUMBER = "5491123456789"; // Reemplaza con tu número real
-
-    function updateWhatsAppLink(btn, title) {
-      if (!btn) return;
-      const message = encodeURIComponent(`Hola Biko Inventor! Quiero consultar por la bicicleta: ${title}`);
-      btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-    }
-
-    let currentRotation = 0;
-    const wheelFrame = document.querySelector('.wheel-gallery');
-
-    function updateGallery(index, direction = 1) {
-      // Remove active from all
-      wrappers.forEach(w => w.classList.remove('active'));
-
-      // Direction: 1 for next (forward), -1 for prev (backward)
-      currentRotation += (360 * direction);
-      wheelFrame.style.transform = `rotate(${currentRotation}deg)`;
-
-      // Set new active
-      currentIndex = (index + wrappers.length) % wrappers.length;
-      wrappers[currentIndex].classList.add('active');
-
-      const title = wrappers[currentIndex].getAttribute('data-title');
-      const desc = wrappers[currentIndex].getAttribute('data-desc');
-
-      // Update content with a small fade effect
-      mainTitle.style.opacity = 0;
-      descText.style.opacity = 0;
-
-      setTimeout(() => {
-        mainTitle.textContent = title;
-        descText.textContent = desc;
-        updateWhatsAppLink(heroConsultBtn, title);
-        mainTitle.style.opacity = 1;
-        descText.style.opacity = 1;
-      }, 300);
-    }
-
-    // Initialize first link
-    updateWhatsAppLink(heroConsultBtn, wrappers[0].getAttribute('data-title'));
-
-    function nextSlide() {
-      updateGallery(currentIndex + 1, 1);
-    }
-
-    function prevSlide() {
-      updateGallery(currentIndex - 1, -1);
-    }
-
-    function startAutoPlay() {
-      stopAutoPlay();
-      autoPlayInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoPlay() {
-      clearInterval(autoPlayInterval);
-    }
-
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      startAutoPlay(); // Reset timer
-    });
-
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      startAutoPlay(); // Reset timer
-    });
-
-    // Portfolio Viewer Logic
-    const portfolioMainImg = document.getElementById('portfolioMainImg');
-    const portfolioTitle = document.getElementById('portfolioTitle');
-    const portfolioDesc = document.getElementById('portfolioDesc');
-    const portfolioConsultBtn = document.querySelector('.portfolio-btn');
-    const thumbItems = document.querySelectorAll('.thumb-item');
-
-    // Initialize first portfolio link
-    updateWhatsAppLink(portfolioConsultBtn, thumbItems[0].getAttribute('data-title'));
-
-    thumbItems.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        if (thumb.classList.contains('active')) return;
-
-        // Remove active from all thumbs
-        thumbItems.forEach(t => t.classList.remove('active'));
-        // Add active to clicked thumb
-        thumb.classList.add('active');
-
-        const title = thumb.getAttribute('data-title');
-        const desc = thumb.getAttribute('data-desc');
-        const img = thumb.getAttribute('data-img');
-
-        // Update main content with transition
-        portfolioMainImg.style.transform = 'scale(1.05)';
-        portfolioMainImg.style.opacity = 0;
-        portfolioTitle.style.opacity = 0;
-        portfolioDesc.style.opacity = 0;
-
-        setTimeout(() => {
-          portfolioMainImg.src = img;
-          portfolioTitle.textContent = title;
-          portfolioDesc.textContent = desc;
-          updateWhatsAppLink(portfolioConsultBtn, title);
-          portfolioMainImg.style.transform = 'scale(1)';
-          portfolioMainImg.style.opacity = 1;
-          portfolioTitle.style.opacity = 1;
-          portfolioDesc.style.opacity = 1;
-        }, 300);
-      });
-    });
-
-
-    // Draggable Portfolio Thumbnails
-    const slider = document.querySelector('.viewer-thumbnails');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let isDragging = false;
-
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true;
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-      isDragging = false;
-      slider.style.scrollBehavior = 'auto'; // Disable smooth scroll while dragging
-    });
-
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
-      slider.style.scrollBehavior = 'smooth'; // Re-enable smooth scroll
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; // scroll-fast
-      if (Math.abs(walk) > 5) isDragging = true;
-      slider.scrollLeft = scrollLeft - walk;
-    });
-
-    // Check if dragging when clicking a thumbnail
-    thumbItems.forEach(thumb => {
-      thumb.addEventListener('click', (e) => {
-        if (isDragging) {
-          e.stopImmediatePropagation();
-          e.preventDefault();
-        }
-      }, true); // Use capture to intercept the click before the gallery logic
-    });
-
-    // Start
-    startAutoPlay();
-
-    // Blog Expansion Logic
-    document.querySelectorAll('.read-more').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const post = btn.closest('.blog-post');
-        const isExpanded = post.classList.toggle('expanded');
-
-        btn.textContent = isExpanded ? 'Cerrar historia' : 'Leer historia';
-
-        if (isExpanded) {
-          // Scroll to show the whole content if needed
-          setTimeout(() => {
-            post.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 400);
-        }
-      });
-    });
-
-    // Floating Menu Logic
-    const floatingMenu = document.getElementById('floatingMenu');
-    const menuTrigger = document.getElementById('menuTrigger');
-    const menuItemsLinks = document.querySelectorAll('.menu-items a');
-
-    menuTrigger.addEventListener('click', () => {
-      const isExpanded = floatingMenu.classList.toggle('active');
-      menuTrigger.setAttribute('aria-expanded', isExpanded);
-    });
-
-    menuItemsLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        floatingMenu.classList.remove('active');
-        menuTrigger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!floatingMenu.contains(e.target) && floatingMenu.classList.contains('active')) {
-        floatingMenu.classList.remove('active');
-        menuTrigger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
+  <script src="main.js" defer></script>
+  <script src="deferred.js" defer></script>
 </body>
 
 </html>
