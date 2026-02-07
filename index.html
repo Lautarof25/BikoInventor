@@ -30,664 +30,726 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#121212">
 </head>
 
 <body>
-  <section class="hero" id="home">
-    <div class="bg-grid"></div>
-    <div class="hero-patch-small p1"></div>
-    <div class="hero-patch-small p2"></div>
-    <div class="hero-patch-small p3"></div>
-    <div class="hero-patch-small p4"></div>
-    <div class="hero-patch-small p5"></div>
-    <div class="hero-patch-small p6"></div>
-    <div class="hero-patch-small p7"></div>
-    <div class="hero-patch-small p8"></div>
-    <div class="hero-patch-small p9"></div>
-    <div class="hero-patch-small p10"></div>
-    <div class="hero-patch-small p11"></div>
-    <div class="hero-patch-small p12"></div>
-    <div class="hero-patch-small p13"></div>
-    <div class="hero-patch-small p14"></div>
-    <div class="hero-patch-small p15"></div>
-    <div class="hero-patch-small p16"></div>
+  <a href="#home" class="skip-link">Saltar al contenido</a>
 
-    <div class="wheel-gallery">
-      <div class="rivets"></div>
-      <div class="gallery">
-        <div class="img-wrapper active" data-title="Bici Inclinada"
-          data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
-          <img src="images/biciDelantera.webp" alt="Bici Inclinada" class="hero-first-img">
-        </div>
-        <div class="img-wrapper" data-title="Bici Canguro"
-          data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp">
-            <img loading="lazy" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici amplio asiento"
-          data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciAsientoAmplioMOBILE.webp">
-            <img loading="lazy" src="images/biciAsientoAmplioDESKTOP.webp" alt="Bici amplio asiento">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Carroza"
-          data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema.">
-          <img loading="lazy" src="images/biciCarrozaDESKTOP.webp" alt="Carroza">
-        </div>
-        <div class="img-wrapper" data-title="Bici modificada"
-          data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciModificadaMOBILE.webp">
-            <img loading="lazy" src="images/biciModificadaDESKTOP.webp" alt="Bici modificada">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici Doble"
-          data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciDobleMOBILE.webp">
-            <img loading="lazy" src="images/biciDobleDESKTOP.webp" alt="Bici Doble">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici Moto"
-          data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciMotoMOBILE.webp">
-            <img loading="lazy" src="images/biciMotoDESKTOP.webp" alt="Bici Moto">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici asiento volante"
-          data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciAsientoVolanteMOBILE.webp">
-            <img loading="lazy" src="images/biciAsientoVolanteDESKTOP.webp" alt="Bici asiento volante">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici silla volante"
-          data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciSillaVolanteMOBILE.webp">
-            <img loading="lazy" src="images/biciSillaVolanteDESKTOP.webp" alt="Bici silla volante">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Bici canguro naranja"
-          data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/biciCanguroNaranjaMOBILE.webp">
-            <img loading="lazy" src="images/biciCanguroNaranjaDESKTOP.webp" alt="Bici canguro naranja">
-          </picture>
-        </div>
-        <div class="img-wrapper" data-title="Tricicleta"
-          data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes.">
-          <picture>
-            <source media="(max-width: 1023px)" srcset="images/tricicletaMOBILE.webp">
-            <img loading="lazy" src="images/tricicletaDESKTOP.webp" alt="Tricicleta">
-          </picture>
-        </div>
-      </div>
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="bg-grid"></div>
+      <div class="hero-patch-small p1"></div>
+      <div class="hero-patch-small p2"></div>
+      <div class="hero-patch-small p3"></div>
+      <div class="hero-patch-small p4"></div>
+      <div class="hero-patch-small p5"></div>
+      <div class="hero-patch-small p6"></div>
+      <div class="hero-patch-small p7"></div>
+      <div class="hero-patch-small p8"></div>
+      <div class="hero-patch-small p9"></div>
+      <div class="hero-patch-small p10"></div>
+      <div class="hero-patch-small p11"></div>
+      <div class="hero-patch-small p12"></div>
+      <div class="hero-patch-small p13"></div>
+      <div class="hero-patch-small p14"></div>
+      <div class="hero-patch-small p15"></div>
+      <div class="bg-grid" aria-hidden="true"></div>
+      <div class="hero-patch-small p1" aria-hidden="true"></div>
+      <div class="hero-patch-small p2" aria-hidden="true"></div>
+      <div class="hero-patch-small p3" aria-hidden="true"></div>
+      <div class="hero-patch-small p4" aria-hidden="true"></div>
+      <div class="hero-patch-small p5" aria-hidden="true"></div>
+      <div class="hero-patch-small p6" aria-hidden="true"></div>
+      <div class="hero-patch-small p7" aria-hidden="true"></div>
+      <div class="hero-patch-small p8" aria-hidden="true"></div>
+      <div class="hero-patch-small p9" aria-hidden="true"></div>
+      <div class="hero-patch-small p10" aria-hidden="true"></div>
+      <div class="hero-patch-small p11" aria-hidden="true"></div>
+      <div class="hero-patch-small p12" aria-hidden="true"></div>
+      <div class="hero-patch-small p13" aria-hidden="true"></div>
+      <div class="hero-patch-small p14" aria-hidden="true"></div>
+      <div class="hero-patch-small p15" aria-hidden="true"></div>
+      <div class="hero-patch-small p16" aria-hidden="true"></div>
 
-      <!-- La galería sigue igual -->
-    </div>
-
-    <div class="hero-content">
-      <div class="info">
-        <h2 class="item-title" id="main-title">Bici Inclinada</h2>
-        <p class="description" id="main-description">
-          Bicicleta experimental con estructura reforzada, diseño urbano y
-          geometría personalizada para alto rendimiento.
-        </p>
-
-        <!-- Botones de Navegación ahora dentro de info -->
-        <div class="nav-buttons">
-          <button id="prevBtn" class="nav-btn" aria-label="Anterior">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
-            </svg>
-          </button>
-
-          <a href="#" id="heroConsultBtn" class="consult-btn" target="_blank">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
-            </svg>
-            <span class="btn-text">Consultar</span>
-          </a>
-
-          <button id="nextBtn" class="nav-btn" aria-label="Siguiente">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <nav class="floating-menu" id="floatingMenu">
-      <div class="menu-items-container">
-        <div class="menu-items">
-          <a href="#home">Inicio</a>
-          <a href="#about">Sobre Mí</a>
-          <a href="#portfolio">Portafolio</a>
-          <a href="#videos">Videos</a>
-          <a href="#blog">Historias</a>
-          <a href="#workshop">Taller</a>
-          <a href="#services">Servicios</a>
-          <a href="#contact">Contacto</a>
-        </div>
-      </div>
-      <div class="menu-bar">
-        <div class="menu-trigger" id="menuTrigger">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="wheel-gallery">
+        <div class="rivets" aria-hidden="true"></div>
+        <div class="gallery">
+          <div class="img-wrapper active" data-title="Bici Inclinada"
+            data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
+            <img src="images/biciDelantera.webp"
+              alt="Bici experimental inclinada de color naranja con diseño aerodinámico" class="hero-first-img"
+              loading="eager" fetchpriority="high" width="800" height="800">
           </div>
-          <h1 class="title">Biko <span>Inventor</span></h1>
+          <div class="img-wrapper" data-title="Bici Canguro"
+            data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro" width="1200" height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici amplio asiento"
+            data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciAsientoAmplioMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciAsientoAmplioDESKTOP.webp" alt="Bici amplio asiento" width="1200"
+                height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Carroza"
+            data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema.">
+            <img loading="lazy" src="images/biciCarrozaDESKTOP.webp" alt="Carroza" width="1200" height="800">
+          </div>
+          <div class="img-wrapper" data-title="Bici modificada"
+            data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciModificadaMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciModificadaDESKTOP.webp" alt="Bici modificada" width="1200"
+                height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici Doble"
+            data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciDobleMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciDobleDESKTOP.webp" alt="Bici Doble" width="1200" height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici Moto"
+            data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciMotoMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciMotoDESKTOP.webp" alt="Bici Moto" width="1200" height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici asiento volante"
+            data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciAsientoVolanteMOBILE.webp" width="800"
+                height="800">
+              <img loading="lazy" src="images/biciAsientoVolanteDESKTOP.webp" alt="Bici asiento volante" width="1200"
+                height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici silla volante"
+            data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciSillaVolanteMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciSillaVolanteDESKTOP.webp" alt="Bici silla volante" width="1200"
+                height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici canguro naranja"
+            data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciCanguroNaranjaMOBILE.webp" width="800"
+                height="800">
+              <img loading="lazy" src="images/biciCanguroNaranjaDESKTOP.webp" alt="Bici canguro naranja" width="1200"
+                height="800">
+            </picture>
+          </div>
+          <div class="img-wrapper" data-title="Tricicleta"
+            data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes.">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/tricicletaMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/tricicletaDESKTOP.webp" alt="Tricicleta" width="1200" height="800">
+            </picture>
+          </div>
         </div>
-        <div class="social-links">
-          <a href="https://wa.me/5491150997333" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/bikoinventor/" target="_blank" class="social-icon instagram"
-            aria-label="Instagram">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/biko.biko.129/" target="_blank" class="social-icon" aria-label="Facebook">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9V14.99H7.9V12.06H10.44V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.93H13.57V21.96c4.78-.75 8.44-4.9 8.44-9.9 0-5.53-4.5-10.02-10-10.02z" />
-            </svg>
-          </a>
-          <a href="https://www.youtube.com/@bikoinventor5645" target="_blank" class="social-icon youtube"
-            aria-label="YouTube">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M10 15l5.19-3L10 9v6m12-3c0-1.64-.13-3.27-.38-4.87-.21-1.34-1.34-2.39-2.69-2.53C16.9 4.4 12 4.4 12 4.4s-4.9 0-6.93.2c-1.35.14-2.48 1.19-2.69 2.53C2.13 8.73 2 10.36 2 12c0 1.64.13 3.27.38 4.87.21 1.34 1.34 2.39 2.69 2.53 2.03.2 6.93.2 6.93.2s4.9 0 6.93-.2c1.35-.14 2.48-1.19 2.69-2.53.25-1.6.38-3.23.38-4.87z" />
-            </svg>
-          </a>
+
+        <!-- La galería sigue igual -->
+      </div>
+
+      <div class="hero-content" aria-live="polite">
+        <div class="info">
+          <h2 class="item-title" id="main-title">Bici Inclinada</h2>
+          <p class="description" id="main-description">
+            Bicicleta experimental con estructura reforzada, diseño urbano y
+            geometría personalizada para alto rendimiento.
+          </p>
+
+          <!-- Botones de Navegación ahora dentro de info -->
+          <div class="nav-buttons">
+            <button id="prevBtn" class="nav-btn" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" />
+              </svg>
+            </button>
+
+            <a href="#" id="heroConsultBtn" class="consult-btn" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
+              </svg>
+              <span class="btn-text">Consultar</span>
+            </a>
+
+            <button id="nextBtn" class="nav-btn" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
 
-  </section>
-
-  <section class="about" id="about">
-    <div class="about-patch ap1"></div>
-    <div class="about-patch ap2"></div>
-    <div class="container">
-      <div class="about-card">
-        <div class="about-image">
-          <!-- Espacio para la foto vertical -->
-          <img loading="lazy" src="images/ariel.webp" alt="Sobre Mí" id="about-img">
-        </div>
-        <div class="about-content">
-          <span class="subtitle">El Creador</span>
-          <h2 class="section-title">Detrás del <span>Inventor</span></h2>
-          <div class="glow-line"></div>
-
-          <div class="about-text">
-            <p>
-              Mi nombre es <span>Ariel Alejo Torcal</span>, soy un apasionado de la ingeniería artesanal y el ciclismo
-              experimental. En mi taller, no solo arreglo
-              bicicletas; busco desafiar las leyes de lo convencional creando máquinas únicas que cuentan historias a
-              través del acero y el ingenio.
-            </p>
-            <p>
-              Desde el service más técnico hasta la invención más loca en mi taller. Aquí
-              la precisión se mezcla con la locura para dar vida a proyectos que parecen imposibles, pero que ruedan con
-              una fuerza imparable.
-            </p>
+      <nav class="floating-menu" id="floatingMenu">
+        <div class="menu-items-container">
+          <div class="menu-items" id="menuItems">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#videos">Videos</a>
+            <a href="#blog">Historias</a>
+            <a href="#workshop">Taller</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
           </div>
-
-          <div class="about-socials">
+        </div>
+        <div class="menu-bar">
+          <button class="menu-trigger" id="menuTrigger" aria-label="Abrir menú de navegación" aria-expanded="false"
+            aria-controls="menuItems">
+            <div class="hamburger" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span class="title">Biko <span>Inventor</span></span>
+          </button>
+          <div class="social-links">
+            <a href="https://wa.me/5491150997333" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
+              </svg>
+            </a>
             <a href="https://www.instagram.com/bikoinventor/" target="_blank" class="social-icon instagram"
               aria-label="Instagram">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor"
                   d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
               </svg>
             </a>
             <a href="https://www.facebook.com/biko.biko.129/" target="_blank" class="social-icon" aria-label="Facebook">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor"
                   d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9V14.99H7.9V12.06H10.44V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.93H13.57V21.96c4.78-.75 8.44-4.9 8.44-9.9 0-5.53-4.5-10.02-10-10.02z" />
               </svg>
             </a>
             <a href="https://www.youtube.com/@bikoinventor5645" target="_blank" class="social-icon youtube"
               aria-label="YouTube">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor"
                   d="M10 15l5.19-3L10 9v6m12-3c0-1.64-.13-3.27-.38-4.87-.21-1.34-1.34-2.39-2.69-2.53C16.9 4.4 12 4.4 12 4.4s-4.9 0-6.93.2c-1.35.14-2.48 1.19-2.69 2.53C2.13 8.73 2 10.36 2 12c0 1.64.13 3.27.38 4.87.21 1.34 1.34 2.39 2.69 2.53 2.03.2 6.93.2 6.93.2s4.9 0 6.93-.2c1.35-.14 2.48-1.19 2.69-2.53.25-1.6.38-3.23.38-4.87z" />
               </svg>
             </a>
           </div>
-
-          <a href="#portfolio" class="about-btn">Ver Portafolio</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </nav>
 
-  <section class="portfolio" id="portfolio">
-    <div class="portfolio-patch pp1"></div>
-    <div class="portfolio-patch pp2"></div>
-    <div class="portfolio-patch pp3"></div>
-    <div class="portfolio-patch pp4"></div>
-    <div class="portfolio-patch pp5"></div>
-    <div class="portfolio-patch pp6"></div>
+    </section>
 
-    <div class="container">
-      <div class="section-header">
-        <span class="subtitle">Galería de Detalles</span>
-        <h2 class="section-title">Nuestras <span>Creaciones</span></h2>
-        <div class="glow-line"></div>
-      </div>
+    <section class="about" id="about">
+      <div class="about-patch ap1" aria-hidden="true"></div>
+      <div class="about-patch ap2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="about-card">
+          <div class="about-image">
+            <!-- Espacio para la foto vertical -->
+            <img loading="lazy" src="images/ariel.webp" alt="Sobre Mí" id="about-img" width="400" height="600">
+          </div>
+          <div class="about-content">
+            <span class="subtitle">El Creador</span>
+            <h2 class="section-title">Detrás del <span>Inventor</span></h2>
+            <div class="glow-line" aria-hidden="true"></div>
 
-      <div class="portfolio-viewer">
-        <div class="viewer-top">
-          <div class="viewer-image">
-            <img loading="lazy" id="portfolioMainImg" src="images/biciAsientoAmplio.webp" alt="Bici asiento amplio">
-          </div>
-          <div class="viewer-info">
-            <h3 id="portfolioTitle">Bici asiento amplio</h3>
-            <div class="glow-line"></div>
-            <p id="portfolioDesc">Bicicleta experimental con estructura reforzada, diseño urbano y geometría
-              personalizada para alto rendimiento.</p>
-            <a href="https://wa.me/yournumber" class="portfolio-btn">Consultar por esta bici</a>
-          </div>
-        </div>
-        <div class="viewer-thumbnails">
-          <div class="thumb-item active" data-title="Bici asiento amplio"
-            data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento."
-            data-img="images/biciAsientoAmplio.webp">
-            <img loading="lazy" src="images/biciAsientoAmplio.webp" alt="Thumb 1">
-          </div>
-          <div class="thumb-item" data-title="Bici asiento volante"
-            data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad."
-            data-img="images/biciAsientoVolanteMOBILE.webp">
-            <img loading="lazy" src="images/biciAsientoVolanteMOBILE.webp" alt="Thumb 2">
-          </div>
-          <div class="thumb-item" data-title="Bici canguro Cyan"
-            data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos."
-            data-img="images/biciCanguroCyan.webp">
-            <img loading="lazy" src="images/biciCanguroCyan.webp" alt="Thumb 3">
-          </div>
-          <div class="thumb-item" data-title="Carroza"
-            data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema."
-            data-img="images/biciCarroza.webp">
-            <img loading="lazy" src="images/biciCarroza.webp" alt="Thumb 4">
-          </div>
-          <div class="thumb-item" data-title="Bici Inclinada"
-            data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort."
-            data-img="images/biciDelantera.webp">
-            <img loading="lazy" src="images/biciDelantera.webp" alt="Thumb 5">
-          </div>
-          <div class="thumb-item" data-title="Bici doble"
-            data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente."
-            data-img="images/biciDoble.webp">
-            <img loading="lazy" src="images/biciDoble.webp" alt="Thumb 6">
-          </div>
-          <div class="thumb-item" data-title="Bici modificada"
-            data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles."
-            data-img="images/biciModificada.webp">
-            <img loading="lazy" src="images/biciModificada.webp" alt="Thumb 7">
-          </div>
-          <div class="thumb-item" data-title="Bici Moto"
-            data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre."
-            data-img="images/biciMoto.webp">
-            <img loading="lazy" src="images/biciMoto.webp" alt="Thumb 8">
-          </div>
-          <div class="thumb-item" data-title="Bici silla volante"
-            data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano."
-            data-img="images/biciSillaVolante.webp">
-            <img loading="lazy" src="images/biciSillaVolante.webp" alt="Thumb 9">
-          </div>
-          <div class="thumb-item" data-title="Biko Special"
-            data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas."
-            data-img="images/biciCanguroRojo.webp">
-            <img loading="lazy" src="images/biciCanguroRojo.webp" alt="Thumb 10">
-          </div>
-          <div class="thumb-item" data-title="Bici Doble 2"
-            data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes."
-            data-img="images/biciDoble2.webp">
-            <img loading="lazy" src="images/biciDoble2.webp" alt="Thumb 11">
-          </div>
-          <div class="thumb-item" data-title="Bici Naranja"
-            data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única."
-            data-img="images/biciCanguroNaranja.webp">
-            <img loading="lazy" src="images/biciCanguroNaranja.webp" alt="Thumb 12">
+            <div class="about-text">
+              <p>
+                Mi nombre es <span>Ariel Alejo Torcal</span>, soy un apasionado de la ingeniería artesanal y el ciclismo
+                experimental. En mi taller, no solo arreglo
+                bicicletas; busco desafiar las leyes de lo convencional creando máquinas únicas que cuentan historias a
+                través del acero y el ingenio.
+              </p>
+              <p>
+                Desde el service más técnico hasta la invención más loca en mi taller. Aquí
+                la precisión se mezcla con la locura para dar vida a proyectos que parecen imposibles, pero que ruedan
+                con
+                una fuerza imparable.
+              </p>
+            </div>
+
+            <div class="about-socials">
+              <a href="https://www.instagram.com/bikoinventor/" target="_blank" class="social-icon instagram"
+                aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/biko.biko.129/" target="_blank" class="social-icon"
+                aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9V14.99H7.9V12.06H10.44V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.93H13.57V21.96c4.78-.75 8.44-4.9 8.44-9.9 0-5.53-4.5-10.02-10-10.02z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bikoinventor5645" target="_blank" class="social-icon youtube"
+                aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor"
+                    d="M10 15l5.19-3L10 9v6m12-3c0-1.64-.13-3.27-.38-4.87-.21-1.34-1.34-2.39-2.69-2.53C16.9 4.4 12 4.4 12 4.4s-4.9 0-6.93.2c-1.35.14-2.48 1.19-2.69 2.53C2.13 8.73 2 10.36 2 12c0 1.64.13 3.27.38 4.87.21 1.34 1.34 2.39 2.69 2.53 2.03.2 6.93.2 6.93.2s4.9 0 6.93-.2c1.35-.14 2.48-1.19 2.69-2.53.25-1.6.38-3.23.38-4.87z" />
+                </svg>
+              </a>
+            </div>
+
+            <a href="#portfolio" class="about-btn">Ver Portafolio</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="videos" id="videos">
-    <div class="video-patch vp1"></div>
-    <div class="video-patch vp2"></div>
-    <div class="video-patch vp3"></div>
-    <div class="video-patch vp4"></div>
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-patch pp1" aria-hidden="true"></div>
+      <div class="portfolio-patch pp2" aria-hidden="true"></div>
+      <div class="portfolio-patch pp3" aria-hidden="true"></div>
+      <div class="portfolio-patch pp4" aria-hidden="true"></div>
+      <div class="portfolio-patch pp5" aria-hidden="true"></div>
+      <div class="portfolio-patch pp6" aria-hidden="true"></div>
 
-    <div class="container">
-      <div class="section-header">
-        <span class="subtitle">Biko en Acción</span>
-        <h2 class="section-title">Laboratorio <span>en Vivo</span></h2>
-        <div class="glow-line"></div>
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Galería de Detalles</span>
+          <h2 class="section-title">Nuestras <span>Creaciones</span></h2>
+          <div class="glow-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="portfolio-viewer">
+          <div class="viewer-top">
+            <div class="viewer-image">
+              <img loading="lazy" id="portfolioMainImg" src="images/biciAsientoAmplio.webp" alt="Bici asiento amplio"
+                width="800" height="800">
+            </div>
+            <div class="viewer-info">
+              <h3 id="portfolioTitle">Bici asiento amplio</h3>
+              <div class="glow-line" aria-hidden="true"></div>
+              <p id="portfolioDesc">Bicicleta experimental con estructura reforzada, diseño urbano y geometría
+                personalizada para alto rendimiento.</p>
+              <a href="https://wa.me/yournumber" class="portfolio-btn">Consultar por esta bici</a>
+            </div>
+          </div>
+          <div class="viewer-thumbnails">
+            <div class="thumb-item active" data-title="Bici asiento amplio"
+              data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento."
+              data-img="images/biciAsientoAmplio.webp">
+              <img loading="lazy" src="images/biciAsientoAmplio.webp" alt="Miniatura de Bici asiento amplio" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici asiento volante"
+              data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad."
+              data-img="images/biciAsientoVolanteMOBILE.webp">
+              <img loading="lazy" src="images/biciAsientoVolanteMOBILE.webp" alt="Miniatura de Bici asiento volante"
+                width="150" height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici canguro Cyan"
+              data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos."
+              data-img="images/biciCanguroCyan.webp">
+              <img loading="lazy" src="images/biciCanguroCyan.webp" alt="Miniatura de Bici canguro Cyan" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Carroza"
+              data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema."
+              data-img="images/biciCarroza.webp">
+              <img loading="lazy" src="images/biciCarroza.webp" alt="Miniatura de Bici Carroza" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici Inclinada"
+              data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort."
+              data-img="images/biciDelantera.webp">
+              <img loading="lazy" src="images/biciDelantera.webp" alt="Miniatura de Bici Inclinada" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici doble"
+              data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente."
+              data-img="images/biciDoble.webp">
+              <img loading="lazy" src="images/biciDoble.webp" alt="Miniatura de Bici doble" width="150" height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici modificada"
+              data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles."
+              data-img="images/biciModificada.webp">
+              <img loading="lazy" src="images/biciModificada.webp" alt="Miniatura de Bici modificada" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici Moto"
+              data-desc="Innovación en cada detalle: frenos de alta precisión y llantas de alto agarre."
+              data-img="images/biciMoto.webp">
+              <img loading="lazy" src="images/biciMoto.webp" alt="Miniatura de Bici Moto" width="150" height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici silla volante"
+              data-desc="Estructura compacta ideal para almacenamiento y agilidad en el tráfico urbano."
+              data-img="images/biciSillaVolante.webp">
+              <img loading="lazy" src="images/biciSillaVolante.webp" alt="Miniatura de Bici silla volante" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Biko Special"
+              data-desc="Versión 'Inventor Special': máxima expresión de la ingeniería aplicada a dos ruedas."
+              data-img="images/biciCanguroRojo.webp">
+              <img loading="lazy" src="images/biciCanguroRojo.webp" alt="Miniatura de Biko Special Rojo" width="150"
+                height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici Doble 2"
+              data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes."
+              data-img="images/biciDoble2.webp">
+              <img loading="lazy" src="images/biciDoble2.webp" alt="Miniatura de Bici Doble 2" width="150" height="150">
+            </div>
+            <div class="thumb-item" data-title="Bici Naranja"
+              data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única."
+              data-img="images/biciCanguroNaranja.webp">
+              <img loading="lazy" src="images/biciCanguroNaranja.webp" alt="Miniatura de Bici Naranja" width="150"
+                height="150">
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="video-grid">
-        <div class="video-card short-card">
-          <div class="video-wrapper vertical">
-            <iframe loading="lazy" src="https://youtube.com/embed/6WdqulEHQAk" title="Bici Auto" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Bici Auto</h3>
-            <p>Un vistazo rápido a nuestras creaciones en movimiento desde otro ángulo.</p>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="video-wrapper">
-            <iframe loading="lazy"src="https://www.youtube.com/embed/lYrLf4XJAl8" title="Biko Demo 1" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Bici Canguro: Test</h3>
-            <p>La bici se puede usar solo o de a dos, y es ideal para llevar a los niños al colegio, pasear en paisajes
-              turisticos o el uso diario.</p>
-          </div>
+    <section class="videos" id="videos">
+      <div class="video-patch vp1" aria-hidden="true"></div>
+      <div class="video-patch vp2" aria-hidden="true"></div>
+      <div class="video-patch vp3" aria-hidden="true"></div>
+      <div class="video-patch vp4" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Biko en Acción</span>
+          <h2 class="section-title">Laboratorio <span>en Vivo</span></h2>
+          <div class="glow-line" aria-hidden="true"></div>
         </div>
 
-        <div class="video-card">
-          <div class="video-wrapper">
-            <iframe loading="lazy"src="https://www.youtube.com/embed/b-5IIDNQLJ8" title="Biko Demo 2" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+        <div class="video-grid">
+          <div class="video-card short-card">
+            <div class="video-wrapper vertical">
+              <iframe loading="lazy" src="https://youtube.com/embed/6WdqulEHQAk"
+                title="Video demostración: Bici Auto en funcionamiento" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen width="300" height="533"></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Bici Auto</h3>
+              <p>Un vistazo rápido a nuestras creaciones en movimiento desde otro ángulo.</p>
+            </div>
           </div>
-          <div class="video-info">
-            <h3>Bicicleta para personas con una pierna</h3>
-            <p>Bicicleta que cambia a triciclo desarrollada en el taller <span>biko inventor</span> para una persona pe
-              perdió una pierna. Cuenta con mecanismo para bajar la 3er rueda, una puntera en su pedal y una banda
-              elástica para que sea mas facil sacar el pie y tienda siempre a colocarse arriba y adelante.</p>
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/lYrLf4XJAl8"
+                title="Video demostración: Test de Bici Canguro para uso familiar" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen width="560" height="315"></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Bici Canguro: Test</h3>
+              <p>La bici se puede usar solo o de a dos, y es ideal para llevar a los niños al colegio, pasear en
+                paisajes
+                turisticos o el uso diario.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/b-5IIDNQLJ8"
+                title="Video demostración: Bicicleta adaptada para personas con movilidad reducida" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen width="560" height="315"></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Bicicleta para personas con una pierna</h3>
+              <p>Bicicleta que cambia a triciclo desarrollada en el taller <span>biko inventor</span> para una persona
+                pe
+                perdió una pierna. Cuenta con mecanismo para bajar la 3er rueda, una puntera en su pedal y una banda
+                elástica para que sea mas facil sacar el pie y tienda siempre a colocarse arriba y adelante.</p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/J6bA9fMJsMw"
+                title="Video demostración: Proceso de restauración y personalización de bicicletas" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen width="560" height="315"></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Restauración</h3>
+              <p>Aquí muestro dos bicicletas en proceso de modificación y adaptación a los requerimientos de sus dueños.
+              </p>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/mwnIoFcI3fc"
+                title="Video demostración: Bicicleta inclinada con suspensión" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen width="560" height="315"></iframe>
+            </div>
+            <div class="video-info">
+              <h3>Bicleta inclinada</h3>
+              <p>En esta entrega muestro las modificaciones relizadas: se colocó suspensión, se cambió caja pedalera, se
+                prolongó stem, se armó estructura para asiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <div class="blog-patch bgp1" aria-hidden="true"></div>
+      <div class="blog-patch bgp2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Historias de Taller</span>
+          <h2 class="section-title">Bitácora del <span>Inventor</span></h2>
+          <div class="glow-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-post">
+            <div class="post-img">
+              <img loading="lazy" src="images/biciDiscapacitado.webp" alt="Bici para discapacitados" width="600"
+                height="400">
+              <div class="date"><span>15</span> ENE</div>
+            </div>
+            <div class="post-content">
+              <h3>Inclusión sobre Ruedas</h3>
+              <p>Bicicleta que cambia a triciclo desarrollada en el taller <span>biko inventor</span> para una persona
+                pe
+                perdió una
+                pierna. Cuenta con mecanismo para bajar la 3er rueda, una puntera en su pedal y una banda elástica para
+                que sea mas facil sacar el pie y tienda siempre a colocarse arriba y adelante.</p>
+
+              <div class="extended-content">
+                <p>Este proyecto nació de una necesidad real: devolver la autonomía y la alegría de rodar. El mayor
+                  desafío técnico fue el equilibrio y la facilidad de montaje.</p>
+                <ul>
+                  <li>Tercera rueda retráctil neumática.</li>
+                  <li>Sistema de calapiés con liberación rápida.</li>
+                  <li>Geometría estabilizada para bajas velocidades.</li>
+                </ul>
+                <p>Hoy, Ariel sigue perfeccionando este diseño para que sea adaptable a diferentes tipos de movilidad
+                  reducida.</p>
+              </div>
+
+              <a class="read-more">Leer historia</a>
+            </div>
+          </article>
+
+          <article class="blog-post">
+            <div class="post-img">
+              <img loading="lazy" src="images/biciTriple.webp" alt="Bici para 3 personas" width="600" height="400">
+              <div class="date"><span>02</span> FEB</div>
+            </div>
+            <div class="post-content">
+              <h3>El triplete de Acero</h3>
+              <p>¿Es posible que 3 personas pedaleen en sincronía? Construimos esta estructura de 2 metros para
+                demostrar
+                que la fuerza colectiva no tiene límites.</p>
+
+              <div class="extended-content">
+                <p>La "Biko Triple" es una bestia de ingeniería artesanal. Unir 3 transmisiones en una sola línea
+                  de cadena requirió una alineación perfecta de cada eje.</p>
+                <ul>
+                  <li>Cuadro de acero reforzado de 2 metros.</li>
+                  <li>Frenos de disco hidráulicos de alta potencia.</li>
+                  <li>Sincronización de pedaleo mediante tensores intermedios.</li>
+                </ul>
+                <p>Fue probada en eventos locales, convirtiéndose en la atracción principal por su diseño único y el
+                  trabajo en equipo que exige.</p>
+              </div>
+
+              <a class="read-more">Leer historia</a>
+            </div>
+          </article>
+
+          <article class="blog-post">
+            <div class="post-img">
+              <img loading="lazy" src="images/biciAuto.webp" alt="Bici auto" width="600" height="400">
+              <div class="date"><span>20</span> DIC</div>
+            </div>
+            <div class="post-content">
+              <h3>Bici Auto </h3>
+              <p>La Biko Auto rompe con el diseño tradicional. Un cuadro que es puramente un aro, desafiando las
+                leyes
+                de la física y la estética industrial.</p>
+
+              <div class="extended-content">
+                <p>Originalmente concebida como una pieza de arte rodante, la Biko Circular terminó siendo
+                  sorprendentemente cómoda para paseos urbanos.</p>
+                <ul>
+                  <li>Cuadro en forma de círculo perfecto sin tubos rectos.</li>
+                  <li>Transmisión integrada en el perímetro inferior.</li>
+                  <li>Estética minimalista con soldaduras pulidas.</li>
+                </ul>
+                <p>Es el testimonio de que en el taller Biko Inventor, la función sigue a la imaginación, sin sacrificar
+                  la ingeniería.</p>
+              </div>
+
+              <a class="read-more">Leer historia</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workshop" id="workshop">
+      <div class="workshop-patch wp1" aria-hidden="true"></div>
+      <div class="workshop-patch wp2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">El Laboratorio</span>
+          <h2 class="section-title">Donde sucede la <span>Magia</span></h2>
+          <div class="glow-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="workshop-grid">
+          <div class="workshop-main">
+            <div class="workshop-img-large">
+              <img loading="lazy" src="images/tallerCompleto2.webp" alt="Taller Biko" width="800" height="533">
+              <div class="workshop-caption">
+                <h3>Visión General</h3>
+                <p>Cada rincón del taller está diseñado para la experimentación y el perfeccionamiento técnico.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="workshop-side">
+            <div class="workshop-text">
+              <p>En el taller de <span>Biko Inventor</span>, el acero se transforma en arte. No solo reparamos
+                bicicletas; reinventamos el concepto de movilidad a través de procesos artesanales, desde el boceto
+                inicial hasta la soldadura final.</p>
+              <p>Aquí la precisión técnica se encuentra con la creatividad sin límites, dando vida a prototipos únicos
+                que desafían lo convencional.</p>
+            </div>
+            <div class="workshop-gallery-mini">
+              <div class="mini-img"><img loading="lazy" src="images/tallerBocetoBici.webp" alt="Boceto" width="200"
+                  height="150"></div>
+              <div class="mini-img"><img loading="lazy" src="images/tallerBiciArmadoSoldadura.webp" alt="Soldadura"
+                  width="200" height="150">
+              </div>
+              <div class="mini-img"><img loading="lazy" src="images/tallerCuadroBiciPintura.webp" alt="Pintura"
+                  width="200" height="150"></div>
+              <div class="mini-img"><img loading="lazy" src="images/tallerCompleto.webp" alt="Taller" width="200"
+                  height="150"></div>
+            </div>
           </div>
         </div>
 
-        <div class="video-card">
-          <div class="video-wrapper">
-            <iframe loading="lazy"src="https://www.youtube.com/embed/J6bA9fMJsMw" title="Biko Demo 3" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+        <div class="workshop-details-grid">
+          <div class="detail-item">
+            <img loading="lazy" src="images/tallerCuadrosBicisSoldados.webp" alt="Cuadros soldados" width="400"
+              height="300">
+            <div class="detail-info">
+              <h4>Estructuras Reforzadas</h4>
+              <p>Soldaduras precisas que garantizan durabilidad extrema.</p>
+            </div>
           </div>
-          <div class="video-info">
-            <h3>Restauración</h3>
-            <p>Aquí muestro dos bicicletas en proceso de modificación y adaptación a los requerimientos de sus dueños.
+          <div class="detail-item">
+            <img loading="lazy" src="images/tallerArmadoAsientoBici.webp" alt="Armado de asiento" width="400"
+              height="300">
+            <div class="detail-info">
+              <h4>Ergonomía Personalizada</h4>
+              <p>Ajustamos cada componente a la fisonomía del usuario.</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <img loading="lazy" src="images/tallerBiciMotor.webp" alt="Motorización" width="400" height="300">
+            <div class="detail-info">
+              <h4>E-Bike Conversion</h4>
+              <p>Integración de sistemas eléctricos en cuadros experimentales.</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <img loading="lazy" src="images/tallerBicisTerminadas.webp" alt="Terminadas" width="400" height="300">
+            <div class="detail-info">
+              <h4>Listas para Rodar</h4>
+              <p>El resultado final: máquinas únicas listas para la calle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="service-patch sp1" aria-hidden="true"></div>
+      <div class="service-patch sp2" aria-hidden="true"></div>
+      <div class="service-patch sp3" aria-hidden="true"></div>
+      <div class="service-patch sp4" aria-hidden="true"></div>
+      <div class="service-patch sp5" aria-hidden="true"></div>
+      <div class="service-patch sp6" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section-header">
+          <span class="subtitle">Nuestros Servicios</span>
+          <h2 class="section-title">Soluciones para <span>Dos Ruedas</span></h2>
+          <div class="glow-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Armado -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M19.77,5.03L12.14,12.66l-2.12-2.12l7.63-7.63c1.17-1.17,3.07-1.17,4.24,0c1.17,1.17,1.17,3.07,0,4.24L19.77,5.03z M15.1,19.24L12.98,17.12l-5.66,5.66c-1.17,1.17-3.07,1.17-4.24,0c-1.17-1.17-1.17-3.07,0-4.24l5.66-5.66L6.61,10.76L11.56,5.8l7.07,7.07l-3.54,3.54L15.1,19.24z" />
+              </svg>
+            </div>
+            <h3>Armado Experto</h3>
+            <p>¿Compraste tu bici online? La armamos con precisión milimétrica, ajustando cada tornillo para tu
+              seguridad.
             </p>
           </div>
-        </div>
 
-        <div class="video-card">
-          <div class="video-wrapper">
-            <iframe loading="lazy"src="https://www.youtube.com/embed/mwnIoFcI3fc" title="Biko Demo 3" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>Bicleta inclinada</h3>
-            <p>En esta entrega muestro las modificaciones relizadas: se colocó suspensión, se cambió caja pedalera, se
-              prolongó stem, se armó estructura para asiento.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog" id="blog">
-    <div class="blog-patch bgp1"></div>
-    <div class="blog-patch bgp2"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="subtitle">Historias de Taller</span>
-        <h2 class="section-title">Bitácora del <span>Inventor</span></h2>
-        <div class="glow-line"></div>
-      </div>
-
-      <div class="blog-grid">
-        <article class="blog-post">
-          <div class="post-img">
-            <img loading="lazy" src="images/biciDiscapacitado.webp" alt="Bici para discapacitados">
-            <div class="date"><span>15</span> ENE</div>
-          </div>
-          <div class="post-content">
-            <h3>Inclusión sobre Ruedas</h3>
-            <p>Bicicleta que cambia a triciclo desarrollada en el taller <span>biko inventor</span> para una persona pe
-              perdió una
-              pierna. Cuenta con mecanismo para bajar la 3er rueda, una puntera en su pedal y una banda elástica para
-              que sea mas facil sacar el pie y tienda siempre a colocarse arriba y adelante.</p>
-
-            <div class="extended-content">
-              <p>Este proyecto nació de una necesidad real: devolver la autonomía y la alegría de rodar. El mayor
-                desafío técnico fue el equilibrio y la facilidad de montaje.</p>
-              <ul>
-                <li>Tercera rueda retráctil neumática.</li>
-                <li>Sistema de calapiés con liberación rápida.</li>
-                <li>Geometría estabilizada para bajas velocidades.</li>
-              </ul>
-              <p>Hoy, Ariel sigue perfeccionando este diseño para que sea adaptable a diferentes tipos de movilidad
-                reducida.</p>
+          <!-- Servicio 2: Mantenimiento -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.46C14.44,2.22 14.23,2.05 14,2.05H10C9.77,2.05 9.56,2.22 9.53,2.46L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.88L9.53,21.54C9.56,21.78 9.77,21.95 10,21.95H14C14.23,21.95 14.44,21.78 14.47,21.54L14.86,18.88C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+              </svg>
             </div>
-
-            <a class="read-more">Leer historia</a>
+            <h3>Mantenimiento Base</h3>
+            <p>Limpieza profesional, parches de alta durabilidad y ajuste de frenos para que tu viaje nunca se detenga.
+            </p>
           </div>
-        </article>
 
-        <article class="blog-post">
-          <div class="post-img">
-            <img loading="lazy" src="images/biciTriple.webp" alt="Bici para 3 personas">
-            <div class="date"><span>02</span> FEB</div>
-          </div>
-          <div class="post-content">
-            <h3>El triplete de Acero</h3>
-            <p>¿Es posible que 3 personas pedaleen en sincronía? Construimos esta estructura de 2 metros para demostrar
-              que la fuerza colectiva no tiene límites.</p>
-
-            <div class="extended-content">
-              <p>La "Biko Triple" es una bestia de ingeniería artesanal. Unir 3 transmisiones en una sola línea
-                de cadena requirió una alineación perfecta de cada eje.</p>
-              <ul>
-                <li>Cuadro de acero reforzado de 2 metros.</li>
-                <li>Frenos de disco hidráulicos de alta potencia.</li>
-                <li>Sincronización de pedaleo mediante tensores intermedios.</li>
-              </ul>
-              <p>Fue probada en eventos locales, convirtiéndose en la atracción principal por su diseño único y el
-                trabajo en equipo que exige.</p>
+          <!-- Servicio 3: Upgrades -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M13,2V5.67L15.22,4.89L15.93,6.31L13.72,7.09L15.31,10.27L14.06,12.44L11.83,8L9.44,12.78L8.23,10.36L10.25,6.32L11.66,7.74L12.42,5.55L10.22,6.33L9.5,4.91L11.72,4.13V2H13M12,13A4,4 0 0,1 16,17A4,4 0 0,1 12,21A4,4 0 0,1 8,17A4,4 0 0,1 12,13M12,14.5A2.5,2.5 0 0,0 9.5,17A2.5,2.5 0 0,0 12,19.5A2.5,2.5 0 0,0 14.5,17A2.5,2.5 0 0,0 12,14.5Z" />
+              </svg>
             </div>
-
-            <a class="read-more">Leer historia</a>
+            <h3>Mejoras</h3>
+            <p>Cambio de bujes y rayos reforzados. Optimizamos tu estructura actual para que dure años más, ahorrándote
+              una bici nueva.</p>
           </div>
-        </article>
 
-        <article class="blog-post">
-          <div class="post-img">
-            <img  loading="lazy" src="images/biciAuto.webp" alt="Bici auto">
-            <div class="date"><span>20</span> DIC</div>
-          </div>
-          <div class="post-content">
-            <h3>Bici Auto </h3>
-            <p>La Biko Auto rompe con el diseño tradicional. Un cuadro que es puramente un aro, desafiando las
-              leyes
-              de la física y la estética industrial.</p>
-
-            <div class="extended-content">
-              <p>Originalmente concebida como una pieza de arte rodante, la Biko Circular terminó siendo
-                sorprendentemente cómoda para paseos urbanos.</p>
-              <ul>
-                <li>Cuadro en forma de círculo perfecto sin tubos rectos.</li>
-                <li>Transmisión integrada en el perímetro inferior.</li>
-                <li>Estética minimalista con soldaduras pulidas.</li>
-              </ul>
-              <p>Es el testimonio de que en el taller Biko Inventor, la función sigue a la imaginación, sin sacrificar
-                la ingeniería.</p>
+          <!-- Servicio 4: Invención (Especial) -->
+          <div class="service-card featured">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+              </svg>
             </div>
-
-            <a class="read-more">Leer historia</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="workshop" id="workshop">
-    <div class="workshop-patch wp1"></div>
-    <div class="workshop-patch wp2"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="subtitle">El Laboratorio</span>
-        <h2 class="section-title">Donde sucede la <span>Magia</span></h2>
-        <div class="glow-line"></div>
-      </div>
-
-      <div class="workshop-grid">
-        <div class="workshop-main">
-          <div class="workshop-img-large">
-            <img  loading="lazy" src="images/tallerCompleto2.webp" alt="Taller Biko">
-            <div class="workshop-caption">
-              <h3>Visión General</h3>
-              <p>Cada rincón del taller está diseñado para la experimentación y el perfeccionamiento técnico.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="workshop-side">
-          <div class="workshop-text">
-            <p>En el taller de <span>Biko Inventor</span>, el acero se transforma en arte. No solo reparamos
-              bicicletas; reinventamos el concepto de movilidad a través de procesos artesanales, desde el boceto
-              inicial hasta la soldadura final.</p>
-            <p>Aquí la precisión técnica se encuentra con la creatividad sin límites, dando vida a prototipos únicos
-              que desafían lo convencional.</p>
-          </div>
-          <div class="workshop-gallery-mini">
-            <div class="mini-img"><img  loading="lazy" src="images/tallerBocetoBici.webp" alt="Boceto"></div>
-            <div class="mini-img"><img  loading="lazy" src="images/tallerBiciArmadoSoldadura.webp" alt="Soldadura"></div>
-            <div class="mini-img"><img  loading="lazy" src="images/tallerCuadroBiciPintura.webp" alt="Pintura"></div>
-            <div class="mini-img"><img  loading="lazy" src="images/tallerCompleto.webp" alt="Taller"></div>
+            <h3>Laboratorio Inventor</h3>
+            <p>Bicicletas dobles, triples o prototipos únicos. Si podés imaginarlo, en Biko lo construimos desde cero.
+            </p>
+            <div class="tag">Exclusivo</div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="workshop-details-grid">
-        <div class="detail-item">
-          <img loading="lazy"  src="images/tallerCuadrosBicisSoldados.webp" alt="Cuadros soldados">
-          <div class="detail-info">
-            <h4>Estructuras Reforzadas</h4>
-            <p>Soldaduras precisas que garantizan durabilidad extrema.</p>
-          </div>
-        </div>
-        <div class="detail-item">
-          <img loading="lazy"  src="images/tallerArmadoAsientoBici.webp" alt="Armado de asiento">
-          <div class="detail-info">
-            <h4>Ergonomía Personalizada</h4>
-            <p>Ajustamos cada componente a la fisonomía del usuario.</p>
-          </div>
-        </div>
-        <div class="detail-item">
-          <img loading="lazy"  src="images/tallerBiciMotor.webp" alt="Motorización">
-          <div class="detail-info">
-            <h4>E-Bike Conversion</h4>
-            <p>Integración de sistemas eléctricos en cuadros experimentales.</p>
-          </div>
-        </div>
-        <div class="detail-item">
-          <img loading="lazy"  src="images/tallerBicisTerminadas.webp" alt="Terminadas">
-          <div class="detail-info">
-            <h4>Listas para Rodar</h4>
-            <p>El resultado final: máquinas únicas listas para la calle.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services" id="services">
-    <div class="service-patch sp1"></div>
-    <div class="service-patch sp2"></div>
-    <div class="service-patch sp3"></div>
-    <div class="service-patch sp4"></div>
-    <div class="service-patch sp5"></div>
-    <div class="service-patch sp6"></div>
-
-    <div class="container">
-      <div class="section-header">
-        <span class="subtitle">Nuestros Servicios</span>
-        <h2 class="section-title">Soluciones para <span>Dos Ruedas</span></h2>
-        <div class="glow-line"></div>
-      </div>
-
-      <div class="services-grid">
-        <!-- Servicio 1: Armado -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M19.77,5.03L12.14,12.66l-2.12-2.12l7.63-7.63c1.17-1.17,3.07-1.17,4.24,0c1.17,1.17,1.17,3.07,0,4.24L19.77,5.03z M15.1,19.24L12.98,17.12l-5.66,5.66c-1.17,1.17-3.07,1.17-4.24,0c-1.17-1.17-1.17-3.07,0-4.24l5.66-5.66L6.61,10.76L11.56,5.8l7.07,7.07l-3.54,3.54L15.1,19.24z" />
-            </svg>
-          </div>
-          <h3>Armado Experto</h3>
-          <p>¿Compraste tu bici online? La armamos con precisión milimétrica, ajustando cada tornillo para tu seguridad.
-          </p>
-        </div>
-
-        <!-- Servicio 2: Mantenimiento -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.46C14.44,2.22 14.23,2.05 14,2.05H10C9.77,2.05 9.56,2.22 9.53,2.46L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.88L9.53,21.54C9.56,21.78 9.77,21.95 10,21.95H14C14.23,21.95 14.44,21.78 14.47,21.54L14.86,18.88C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
-            </svg>
-          </div>
-          <h3>Mantenimiento Base</h3>
-          <p>Limpieza profesional, parches de alta durabilidad y ajuste de frenos para que tu viaje nunca se detenga.
-          </p>
-        </div>
-
-        <!-- Servicio 3: Upgrades -->
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M13,2V5.67L15.22,4.89L15.93,6.31L13.72,7.09L15.31,10.27L14.06,12.44L11.83,8L9.44,12.78L8.23,10.36L10.25,6.32L11.66,7.74L12.42,5.55L10.22,6.33L9.5,4.91L11.72,4.13V2H13M12,13A4,4 0 0,1 16,17A4,4 0 0,1 12,21A4,4 0 0,1 8,17A4,4 0 0,1 12,13M12,14.5A2.5,2.5 0 0,0 9.5,17A2.5,2.5 0 0,0 12,19.5A2.5,2.5 0 0,0 14.5,17A2.5,2.5 0 0,0 12,14.5Z" />
-            </svg>
-          </div>
-          <h3>Mejoras</h3>
-          <p>Cambio de bujes y rayos reforzados. Optimizamos tu estructura actual para que dure años más, ahorrándote
-            una bici nueva.</p>
-        </div>
-
-        <!-- Servicio 4: Invención (Especial) -->
-        <div class="service-card featured">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
-            </svg>
-          </div>
-          <h3>Laboratorio Inventor</h3>
-          <p>Bicicletas dobles, triples o prototipos únicos. Si podés imaginarlo, en Biko lo construimos desde cero.
-          </p>
-          <div class="tag">Exclusivo</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer class="main-footer" id="contact">
     <div class="container">
@@ -699,7 +761,7 @@
           <div class="footer-socials">
             <a href="https://www.instagram.com/bikoinventor/" target="_blank" class="social-icon"
               aria-label="Instagram">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor"
                   d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
               </svg>
@@ -716,7 +778,7 @@
         <div class="footer-contact">
           <h3>Contacto</h3>
           <div class="contact-item">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path fill="currentColor"
                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
             </svg>
@@ -949,12 +1011,14 @@
     const menuItemsLinks = document.querySelectorAll('.menu-items a');
 
     menuTrigger.addEventListener('click', () => {
-      floatingMenu.classList.toggle('active');
+      const isExpanded = floatingMenu.classList.toggle('active');
+      menuTrigger.setAttribute('aria-expanded', isExpanded);
     });
 
     menuItemsLinks.forEach(link => {
       link.addEventListener('click', () => {
         floatingMenu.classList.remove('active');
+        menuTrigger.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -962,6 +1026,7 @@
     document.addEventListener('click', (e) => {
       if (!floatingMenu.contains(e.target) && floatingMenu.classList.contains('active')) {
         floatingMenu.classList.remove('active');
+        menuTrigger.setAttribute('aria-expanded', 'false');
       }
     });
   </script>
