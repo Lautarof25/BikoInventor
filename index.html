@@ -93,6 +93,14 @@
   <a href="#home" class="skip-link">Saltar al contenido</a>
 
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="sparkGrad">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="40%" stop-color="#ffe066" />
+        <stop offset="70%" stop-color="#ffae00" />
+        <stop offset="100%" stop-color="#ff6a00" />
+      </radialGradient>
+    </defs>
     <symbol id="svg-tire" viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.05)" stroke="var(--primary)" stroke-width="12" />
     </symbol>
@@ -109,13 +117,40 @@
       <circle cx="50" cy="50" r="5" fill="var(--primary)" />
     </symbol>
 
-    <symbol id="svg-welder" viewBox="0 0 100 100">
+    <symbol id="svg-welder" viewBox="0 0 120 100">
+      <!-- Mango -->
       <path d="M20 90 L20 45 Q20 40 25 40 L35 40 L35 90 Z" fill="#555" />
+      <!-- Gatillo -->
       <path d="M35 55 Q42 55 42 65 Q42 75 35 75" fill="none" stroke="var(--primary)" stroke-width="4"
         stroke-linecap="round" />
-      <path d="M30 40 L30 25 Q30 15 40 15 L65 15" fill="none" stroke="var(--primary)" stroke-width="8"
+      <!-- Cuello -->
+      <path d="M27.5 40 L27.5 25 Q27.5 15 40 15 L65 15" fill="none" stroke="var(--primary)" stroke-width="8"
         stroke-linecap="round" />
+      <!-- Boquilla -->
       <path d="M65 10 L85 13 L85 17 L65 20 Z" fill="#999" />
+      <!-- CHISPA (extremo derecho) -->
+      <g transform="translate(85,15) scale(0.6)">
+        <!-- Destello -->
+        <circle cx="0" cy="0" r="6" fill="url(#sparkGrad)">
+          <animate attributeName="r" values="3;8;3" dur="0.35s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="1;0.5;1" dur="0.35s" repeatCount="indefinite" />
+        </circle>
+        <!-- Rayos -->
+        <g stroke="#ffd54d" stroke-width="2" stroke-linecap="round">
+          <line x1="0" y1="-12" x2="0" y2="-5">
+            <animate attributeName="y2" values="-4;-10;-4" dur="0.25s" repeatCount="indefinite" />
+          </line>
+          <line x1="12" y1="0" x2="5" y2="0">
+            <animate attributeName="x2" values="4;10;4" dur="0.25s" repeatCount="indefinite" />
+          </line>
+          <line x1="0" y1="12" x2="0" y2="5">
+            <animate attributeName="y2" values="4;10;4" dur="0.25s" repeatCount="indefinite" />
+          </line>
+          <line x1="-12" y1="0" x2="-5" y2="0">
+            <animate attributeName="x2" values="-4;-10;-4" dur="0.25s" repeatCount="indefinite" />
+          </line>
+        </g>
+      </g>
     </symbol>
   </svg>
 
