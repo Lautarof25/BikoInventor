@@ -1806,6 +1806,85 @@
     /* Tall but balanced */
   }
 
+  /* Lite YouTube Styles */
+  .lite-youtube {
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    contain: content;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .lite-youtube::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kVqHupCQboOBVSmYFSRLT98SAYqt678AYv7uDL748vYMMNvtZ4nS8L7SgnYpWIBG9BIbaYfb7hp9mSaeX5h8v41hN7H77pE46D7o69j0Y75H0T1H6G50K/V3gqdgHbgUv1f6vNzk6Pj9gL+7xKxI4hKzoAAAAASUVORK5CYII=');
+    background-position: top;
+    background-repeat: repeat-x;
+    height: 60px;
+    padding-bottom: 50px;
+    width: 100%;
+    transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  .lite-youtube::after {
+    content: "";
+    display: block;
+    width: 68px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20z" fill="white"/></svg>');
+    filter: grayscale(100%);
+    transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+    z-index: 2;
+  }
+
+  .lite-youtube:hover::after {
+    filter: none;
+  }
+
+  .lite-youtube.lyt-activated {
+    cursor: unset;
+  }
+
+  .lite-youtube.lyt-activated::before,
+  .lite-youtube.lyt-activated::after {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .lite-youtube iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border: 0;
+  }
+
+  .lyt-visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
   @media (min-width: 992px) {
     .video-card.short-card {
       grid-row: span 2;
