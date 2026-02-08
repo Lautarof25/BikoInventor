@@ -99,8 +99,15 @@ document.querySelectorAll('.read-more').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     const post = btn.closest('.blog-post');
+    const postTitle = post.querySelector('h3').textContent.trim();
     const isExpanded = post.classList.toggle('expanded');
+
+    // Update text and accessibility label
     btn.textContent = isExpanded ? 'Cerrar historia' : 'Leer historia';
+    btn.setAttribute('aria-label', isExpanded ?
+      `Cerrar historia sobre ${postTitle}` :
+      `Leer historia completa sobre ${postTitle}`);
+
     if (isExpanded) {
       setTimeout(() => {
         post.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
