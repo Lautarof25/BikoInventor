@@ -1763,6 +1763,36 @@
     border: 0;
   }
 
+  [data-id="6WdqulEHQAk"] {
+    background-image: url("https://ucarecdn.com/6049649d-dbd0-4bb0-a552-2436eeaa415f/-/preview/480x360/");
+    background-size: cover;
+    background-position: center;
+  }
+
+  [data-id="lYrLf4XJAl8"] {
+    background-image: url("https://ucarecdn.com/2fbf769b-7cda-4fcb-88d8-32dd97fc3b52/-/preview/480x360/");
+    background-size: cover;
+    background-position: center;
+  }
+
+  [data-id="b-5IIDNQLJ8"] {
+    background-image: url("https://ucarecdn.com/22a107c6-31a5-4096-a998-f85ad34e20f0/-/preview/480x360/");
+    background-size: cover;
+    background-position: center;
+  }
+
+  [data-id="J6bA9fMJsMw"] {
+    background-image: url("https://ucarecdn.com/40c24d3c-0e76-4a58-832b-99b9a72f8ab0/-/preview/480x360/");
+    background-size: cover;
+    background-position: center;
+  }
+
+  [data-id="mwnIoFcI3fc"] {
+    background-image: url("https://ucarecdn.com/9eb9f2dc-d75a-4de9-ba40-8b5d8a02942d/-/preview/480x360/");
+    background-size: cover;
+    background-position: center;
+  }
+
   /* Support for vertical videos like Shorts */
   .video-wrapper.vertical {
     padding-bottom: 150%;
