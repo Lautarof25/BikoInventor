@@ -29,8 +29,11 @@
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> </noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </noscript>
   <link rel="preconnect" href="https://i.ytimg.com">
 
   <style>
@@ -228,19 +231,19 @@
       <div class="wheel-gallery">
         <div class="rivets" aria-hidden="true"></div>
         <div class="gallery">
-          <div class="img-wrapper active" data-title="Bici reclinada"
-            data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
-            <img src="images/biciReclinada.webp"
-              alt="Bici experimental reclinada de color naranja con diseño aerodinámico" class="hero-first-img"
-              loading="eager" fetchpriority="high" width="800" height="800">
-          </div>
-          <div class="img-wrapper" data-title="Bici Canguro"
-            data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad.">
+          <div class="img-wrapper active" data-title="Bici Canguro"
+            data-desc="Ideal para pasear o llevar 2 niñ@s, a la escuela, de entre de entre 2 a 12 años.">
             <picture>
               <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="800" height="800">
               <img loading="eager" fetchpriority="high" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro"
                 width="1200" height="800">
             </picture>
+          </div>
+          <div class="img-wrapper" data-title="Bici reclinada"
+            data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento.">
+            <img src="images/biciReclinada.webp"
+              alt="Bici experimental reclinada de color amarilla con diseño aerodinámico" class="hero-first-img"
+              loading="eager" fetchpriority="high" width="800" height="800">
           </div>
           <div class="img-wrapper" data-title="Bici amplio asiento"
             data-desc="Sistema de tracción mejorado y ergonomía superior para trayectos largos y terrenos mixtos.">
@@ -314,11 +317,14 @@
 
       <div class="hero-content" aria-live="polite">
         <div class="info">
-          <h2 class="item-title" id="main-title">Bici reclinada</h2>
+          <h2 class="item-title" id="main-title">Bici Canguro</h2>
           <p class="description" id="main-description">
-            Bicicleta experimental con estructura reforzada, diseño urbano y
-            geometría personalizada para alto rendimiento.
+            Ideal para pasear o llevar 2 niñ@s, a la escuela, de entre de entre 2 a 12 años.
           </p>
+
+          <a href="#canguro" id="techSpecBtn" class="hero-tech-link">
+            Ver ficha técnica →
+          </a>
 
           <!-- Botones de Navegación ahora dentro de info -->
           <div class="nav-buttons">
@@ -352,6 +358,7 @@
             <a href="#home">Inicio</a>
             <a href="#about">Sobre Mí</a>
             <a href="#portfolio">Portafolio</a>
+            <a href="#canguro">Bici Canguro</a>
             <a href="#videos">Videos</a>
             <a href="#blog">Historias</a>
             <a href="#workshop">Taller</a>
@@ -574,12 +581,111 @@
               <img loading="lazy" src="images/biciDoble2Mini.webp" alt="Miniatura de Bici Doble 2" width="150"
                 height="150">
             </div>
-            <div class="thumb-item" data-title="Bici Naranja"
-              data-desc="El futuro del ciclismo experimental ya está aquí. Cada pieza es única."
-              data-img="images/biciCanguroNaranja.webp">
-              <img loading="lazy" src="images/biciCanguroNaranjaMini.webp" alt="Miniatura de Bici Naranja" width="150"
-                height="150">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="canguro-feature" id="canguro">
+      <div class="container">
+        <div class="feature-card">
+          <div class="feature-image">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="800" height="800">
+              <img loading="lazy" src="images/biciCanguroCyan.webp" alt="Bici Canguro Cyan" width="1200" height="800">
+            </picture>
+          </div>
+          <div class="feature-content">
+            <span class="subtitle">Modelo Insignia</span>
+            <h2 class="section-title">Bici <span>Canguro</span></h2>
+            <div class="glow-line" aria-hidden="true" style="margin-bottom: 25px;"></div>
+            <p class="feature-intro">
+              La solución definitiva para la movilidad familiar urbana. Ideal para pasear o llevar 2 niñ@s (2 a 12 años)
+              a la escuela con la máxima estabilidad y seguridad.
+            </p>
+
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>Ruedas Reforzadas</h4>
+                  <p>Aros doble pared. R20 (Adelante) / R26 (Atrás).</p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>Frenos V-Brake</h4>
+                  <p>Aluminio de alta precisión y respuesta rápida.</p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.35 19.43,11.03L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.97 19.05,5.05L16.56,6.05C16.04,5.66 15.47,5.34 14.86,5.12L14.47,2.46C14.44,2.22 14.23,2.05 14,2.05H10C9.77,2.05 9.56,2.22 9.53,2.46L9.14,5.12C8.53,5.34 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.97 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11.03C4.53,11.35 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.95C7.96,18.34 8.53,18.66 9.14,18.88L9.53,21.54C9.56,21.78 9.77,21.95 10,21.95H14C14.23,21.95 14.44,21.78 14.47,21.54L14.86,18.88C15.47,18.66 16.04,18.34 16.56,17.95L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>6 Velocidades</h4>
+                  <p>Sistema Shimano para trayectos versátiles.</p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M12,2L1,12L12,22L23,12L12,2M12,4.83L20.17,13L12,21.17L3.83,13L12,4.83Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>Tracción Total</h4>
+                  <p>Geometría optimizada para empuje constante.</p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,3L19,6.11V11C19,15.33 16.01,19.43 12,20.93C7.99,19.43 5,15.33 5,11V6.11L12,3M12,7A3,3 0 0,0 9,10A3,3 0 0,0 12,13A3,3 0 0,0 15,10A3,3 0 0,0 12,7Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>Seguridad</h4>
+                  <p>Cinturones de seguridad adelante y atrás.</p>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                      d="M23,10C23,8.89 22.1,8 21,8H19V5C19,3.89 18.1,3 17,3H7C5.89,3 5,3.89 5,5V8H3C1.89,8 1,8.89 1,10V18C1,19.11 1.89,20 3,20H21C22.1,20 23,19.11 23,18V10M5,5H17V8H5V5M21,18H3V10H21V18Z" />
+                  </svg>
+                </div>
+                <div class="tech-info">
+                  <h4>Confort Playero</h4>
+                  <p>Asiento con resortes de alta comodidad.</p>
+                </div>
+              </div>
             </div>
+
+            <a href="https://wa.me/5491150997333?text=Hola!%20Quiero%20consultar%20por%20la%20Bici%20Canguro"
+              class="feature-btn" target="_blank">
+              <svg viewBox="0 0 24 24" width="50" height="50">
+                <path fill="currentColor"
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.33a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.68 4.25 3.76.59.26 1.05.41 1.41.53.6.19 1.14.16 1.56.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28-.25-.13-1.5-.74-1.74-.83-.23-.09-.4-.13-.56.12-.17.25-.64.83-.78.99-.14.17-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.33-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48z" />
+              </svg>
+              Consultar por este modelo
+            </a>
           </div>
         </div>
       </div>
@@ -620,8 +726,7 @@
           </div>
           <div class="video-card">
             <div class="video-wrapper">
-              <div class="lite-youtube" data-id="lYrLf4XJAl8"
-                >
+              <div class="lite-youtube" data-id="lYrLf4XJAl8">
                 <span class="lyt-visually-hidden">Reproducir Video: Bici Canguro Test</span>
               </div>
             </div>
@@ -635,8 +740,7 @@
 
           <div class="video-card">
             <div class="video-wrapper">
-              <div class="lite-youtube" data-id="b-5IIDNQLJ8"
-                >
+              <div class="lite-youtube" data-id="b-5IIDNQLJ8">
                 <span class="lyt-visually-hidden">Reproducir Video: Bici para personas con una pierna</span>
               </div>
             </div>
@@ -651,8 +755,7 @@
 
           <div class="video-card">
             <div class="video-wrapper">
-              <div class="lite-youtube" data-id="J6bA9fMJsMw"
-                >
+              <div class="lite-youtube" data-id="J6bA9fMJsMw">
                 <span class="lyt-visually-hidden">Reproducir Video: Restauración</span>
               </div>
             </div>
@@ -665,8 +768,7 @@
 
           <div class="video-card">
             <div class="video-wrapper">
-              <div class="lite-youtube" data-id="mwnIoFcI3fc"
-                >
+              <div class="lite-youtube" data-id="mwnIoFcI3fc">
                 <span class="lyt-visually-hidden">Reproducir Video: Bicleta reclinada</span>
               </div>
             </div>

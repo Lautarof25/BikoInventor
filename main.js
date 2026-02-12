@@ -10,6 +10,7 @@ const wheelFrame = document.querySelector('.wheel-gallery');
 const floatingMenu = document.getElementById('floatingMenu');
 const menuTrigger = document.getElementById('menuTrigger');
 const menuItemsLinks = document.querySelectorAll('.menu-items a');
+const techSpecBtn = document.getElementById('techSpecBtn');
 
 let currentIndex = 0;
 let autoPlayInterval;
@@ -38,6 +39,11 @@ function updateGallery(index, direction = 1) {
     mainTitle.textContent = title;
     descText.textContent = desc;
     updateWhatsAppLink(heroConsultBtn, title);
+
+    if (techSpecBtn) {
+      techSpecBtn.style.display = (title === "Bici Canguro") ? "inline-flex" : "none";
+    }
+
     mainTitle.style.opacity = 1;
     descText.style.opacity = 1;
   }, 300);
