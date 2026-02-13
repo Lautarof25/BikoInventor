@@ -503,9 +503,26 @@
 
         <div class="portfolio-viewer">
           <div class="viewer-top">
-            <div class="viewer-image">
-              <img loading="lazy" id="portfolioMainImg" src="images/biciCanguroCyan.webp" alt="Bici Canguro"
-                width="800" height="800">
+            <div class="viewer-content">
+              <div class="portfolio-tabs" id="portfolioTabs" style="display: none;">
+                <button type="button" class="tab-btn active" id="btnShowGallery">Fotos</button>
+                <button type="button" class="tab-btn" id="btnShowTech">Ficha Técnica</button>
+              </div>
+              <div class="viewer-image" id="portfolioImageContainer">
+                <img loading="lazy" id="portfolioMainImg" src="images/biciCanguroCyan.webp" alt="Bici Canguro"
+                  width="800" height="800">
+              </div>
+              <div class="viewer-tech" id="portfolioTech" style="display: none;">
+                <ul class="tech-list-simple">
+                  <li>Ruedas reforzadas con aros de aluminio doble pared</li>
+                  <li>R20 Adelante / R26 Atrás</li>
+                  <li>Frenos V-brake de aluminio</li>
+                  <li>Cambio Shimano de 6 velocidades</li>
+                  <li>Tracción total</li>
+                  <li>Cinturones de seguridad adelante y atrás</li>
+                  <li>Asiento playero con resortes</li>
+                </ul>
+              </div>
             </div>
             <div class="viewer-info">
               <h3 id="portfolioTitle">Canguro</h3>
@@ -533,7 +550,7 @@
               <img loading="lazy" src="images/tricicloAsientoMini.webp" alt="Miniatura de Bici asiento volante"
                 width="150" height="150">
             </div>
-            
+
             <div class="thumb-item" data-title="Tipo Zulki"
               data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema."
               data-img="images/biciZulki.webp">

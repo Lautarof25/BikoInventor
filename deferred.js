@@ -6,6 +6,11 @@
   const portfolioDesc = document.getElementById('portfolioDesc');
   const portfolioConsultBtn = document.querySelector('.portfolio-btn');
   const thumbItems = document.querySelectorAll('.thumb-item');
+  const portfolioTabs = document.getElementById('portfolioTabs');
+  const portfolioImageContainer = document.getElementById('portfolioImageContainer');
+  const portfolioTech = document.getElementById('portfolioTech');
+  const btnShowGallery = document.getElementById('btnShowGallery');
+  const btnShowTech = document.getElementById('btnShowTech');
 
   function updateWhatsAppLinkLocal(btn, title) {
     if (!btn) return;
@@ -14,8 +19,31 @@
     btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
   }
 
+  function showTab(type) {
+    if (type === 'gallery') {
+      portfolioImageContainer.style.display = 'block';
+      portfolioTech.style.display = 'none';
+      btnShowGallery.classList.add('active');
+      btnShowTech.classList.remove('active');
+    } else {
+      portfolioImageContainer.style.display = 'none';
+      portfolioTech.style.display = 'flex';
+      btnShowGallery.classList.remove('active');
+      btnShowTech.classList.add('active');
+    }
+  }
+
+  if (btnShowGallery) btnShowGallery.addEventListener('click', () => showTab('gallery'));
+  if (btnShowTech) btnShowTech.addEventListener('click', () => showTab('tech'));
+
   if (thumbItems.length > 0) {
-    updateWhatsAppLinkLocal(portfolioConsultBtn, thumbItems[0].getAttribute('data-title'));
+    const initialTitle = thumbItems[0].getAttribute('data-title');
+    updateWhatsAppLinkLocal(portfolioConsultBtn, initialTitle);
+
+    // Show tabs if initial item is Canguro (case insensitive just in case)
+    if (portfolioTabs) {
+      portfolioTabs.style.display = initialTitle.toLowerCase().includes('canguro') ? 'flex' : 'none';
+    }
   }
 
   thumbItems.forEach(thumb => {
@@ -27,6 +55,14 @@
       const title = thumb.getAttribute('data-title');
       const desc = thumb.getAttribute('data-desc');
       const img = thumb.getAttribute('data-img');
+
+      // Reset to gallery view when changing bike
+      showTab('gallery');
+
+      // Toggle tabs visibility
+      if (portfolioTabs) {
+        portfolioTabs.style.display = title.toLowerCase().includes('canguro') ? 'flex' : 'none';
+      }
 
       portfolioMainImg.style.transform = 'scale(1.05)';
       portfolioMainImg.style.opacity = 0;
