@@ -21,7 +21,7 @@
 
   function showTab(type) {
     if (type === 'gallery') {
-      portfolioImageContainer.style.display = 'block';
+      portfolioImageContainer.style.display = 'flex';
       portfolioTech.style.display = 'none';
       btnShowGallery.classList.add('active');
       btnShowTech.classList.remove('active');
@@ -40,9 +40,8 @@
     const initialTitle = thumbItems[0].getAttribute('data-title');
     updateWhatsAppLinkLocal(portfolioConsultBtn, initialTitle);
 
-    // Show tabs if initial item is Canguro (case insensitive just in case)
     if (portfolioTabs) {
-      portfolioTabs.style.display = initialTitle.toLowerCase().includes('canguro') ? 'flex' : 'none';
+      portfolioTabs.style.display = 'flex';
     }
   }
 
@@ -59,9 +58,9 @@
       // Reset to gallery view when changing bike
       showTab('gallery');
 
-      // Toggle tabs visibility
+      // Tabs are always visible now
       if (portfolioTabs) {
-        portfolioTabs.style.display = title.toLowerCase().includes('canguro') ? 'flex' : 'none';
+        portfolioTabs.style.display = 'flex';
       }
 
       portfolioMainImg.style.transform = 'scale(1.05)';
