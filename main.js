@@ -89,13 +89,50 @@ menuItemsLinks.forEach(link => {
   link.addEventListener('click', () => {
     floatingMenu.classList.remove('active');
     menuTrigger.setAttribute('aria-expanded', 'false');
+    handleMenuVisibility();
   });
 });
+
+// Menu Scroll Visibility Logic
+let scrollTimeout;
+function handleMenuVisibility() {
+  if (!floatingMenu) return;
+
+  // Si el menú está abierto (activo), no lo ocultamos
+  if (floatingMenu.classList.contains('active')) {
+    floatingMenu.classList.remove('menu-hidden');
+    return;
+  }
+
+  // Siempre visible en la primera parte (Hero)
+  const isAtTop = window.scrollY < window.innerHeight * 0.8;
+
+  if (isAtTop) {
+    floatingMenu.classList.remove('menu-hidden');
+    clearTimeout(scrollTimeout);
+  } else {
+    // Si estamos desplazándonos, lo mostramos
+    floatingMenu.classList.remove('menu-hidden');
+
+    // Programamos ocultarlo después de un tiempo de inactividad
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      // Doble check: no ocultar si el menú se abrió mientras esperábamos
+      if (!floatingMenu.classList.contains('active') && window.scrollY >= window.innerHeight * 0.5) {
+        floatingMenu.classList.add('menu-hidden');
+      }
+    }, 2500); // 2.5 segundos de inactividad para ocultar
+  }
+}
+
+window.addEventListener('scroll', handleMenuVisibility, { passive: true });
 
 document.addEventListener('click', (e) => {
   if (floatingMenu && !floatingMenu.contains(e.target) && floatingMenu.classList.contains('active')) {
     floatingMenu.classList.remove('active');
     menuTrigger.setAttribute('aria-expanded', 'false');
+    // Al cerrar, re-evaluar visibilidad
+    handleMenuVisibility();
   }
 });
 
@@ -104,3 +141,4 @@ if (wrappers.length > 0) {
   updateWhatsAppLink(heroConsultBtn, wrappers[0].getAttribute('data-title'));
   startAutoPlay();
 }
+handleMenuVisibility();

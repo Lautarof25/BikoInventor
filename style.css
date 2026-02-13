@@ -314,6 +314,10 @@
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  .floating-menu.menu-hidden {
+    transform: translateY(100%);
+  }
+
   .menu-items-container {
     background: rgba(8, 8, 8, 0.98);
     backdrop-filter: blur(25px) saturate(150%);
