@@ -49,7 +49,11 @@ function updateGallery(index, direction = 1) {
   }, 300);
 }
 
-function nextSlide() {
+function nextSlide(auto = false) {
+  if (auto && currentIndex === wrappers.length - 1) {
+    stopAutoPlay();
+    return;
+  }
   updateGallery(currentIndex + 1, 1);
 }
 
@@ -59,7 +63,7 @@ function prevSlide() {
 
 function startAutoPlay() {
   stopAutoPlay();
-  autoPlayInterval = setInterval(nextSlide, 5000);
+  autoPlayInterval = setInterval(() => nextSlide(true), 5000);
 }
 
 function stopAutoPlay() {
