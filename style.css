@@ -2,6 +2,18 @@
     scroll-behavior: smooth;
   }
 
+  /* Performance: Skip rendering of off-screen content */
+  .about,
+  .portfolio,
+  .canguro-feature,
+  .videos,
+  .blog,
+  .workshop,
+  .services {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
+
   /* Skip link for accessibility */
   .skip-link {
     position: absolute;

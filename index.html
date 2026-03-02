@@ -29,12 +29,15 @@
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  </noscript>
   <link rel="preconnect" href="https://i.ytimg.com">
+  
+  <!-- Preload LCP image for mobile -->
+  <link rel="preload" as="image" href="images/biciCanguroCyanMOBILE.webp" media="(max-width: 1023px)">
+  <!-- Preload LCP image for desktop -->
+  <link rel="preload" as="image" href="images/biciCanguroCyanDESKTOP.webp" media="(min-width: 1024px)">
+  
+  <!-- Prefetch next images -->
+  <link rel="prefetch" as="image" href="images/biciReclinada.webp">
 
   <style>
     /* Estilos críticos para evitar FOUC y Layout Shifts */
@@ -53,6 +56,25 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v21/pxiKyp0ihIEF2isQFjxG.woff2) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: 'Poppins';
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp0kvftJiUs0IPjm.woff2) format('woff2');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    * {
       font-family: 'Poppins', sans-serif;
     }
 

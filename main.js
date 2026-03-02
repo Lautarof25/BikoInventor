@@ -140,12 +140,21 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Initialize
-if (wrappers.length > 0) {
-  updateWhatsAppLink(heroConsultBtn, wrappers[0].getAttribute('data-title'));
-  startAutoPlay();
+// Initialize - defer non-critical operations
+function init() {
+  if (wrappers.length > 0) {
+    updateWhatsAppLink(heroConsultBtn, wrappers[0].getAttribute('data-title'));
+    startAutoPlay();
+  }
+  handleMenuVisibility();
 }
-handleMenuVisibility();
+
+// Use requestIdleCallback for non-critical initialization to improve TTI
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(() => init(), { timeout: 200 });
+} else {
+  setTimeout(init, 100);
+}
 
 // CANGURO GALLERY SLIDER
 const galleryTrack = document.querySelector('.feature-image .gallery-track');

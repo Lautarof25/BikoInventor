@@ -204,3 +204,17 @@ if (document.readyState === 'loading') {
 } else {
   initOptimizations();
 }
+
+// Defer non-critical operations with requestIdleCallback
+const deferNonCritical = () => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      initOptimizations();
+    }, { timeout: 1000 });
+  } else {
+    setTimeout(initOptimizations, 500);
+  }
+};
+
+// Initialize portfolio logic immediately (needed for interaction)
+deferNonCritical();
