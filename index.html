@@ -32,10 +32,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://i.ytimg.com">
 
-  <!-- Preload LCP image for mobile -->
-  <link rel="preload" as="image" href="images/biciCanguroCyanMOBILE.webp" media="(max-width: 1023px)">
-  <!-- Preload LCP image for desktop -->
-  <link rel="preload" as="image" href="images/biciCanguroCyanDESKTOP.webp" media="(min-width: 1024px)">
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="bikoInventorHero.png">
 
   <!-- Prefetch next images -->
   <link rel="prefetch" as="image" href="images/biciReclinada.webp">
@@ -202,7 +200,31 @@
   </svg>
 
   <main id="main-content">
-    <section class="hero" id="home">
+    <section class="hero-main" id="home">
+      <div class="bg-grid"></div>
+      <div class="hero-container">
+        <div class="hero-text">
+          <span class="hero-subtitle">Ingeniería Artesanal</span>
+          <h1 class="hero-title">Biko <span>Inventor</span></h1>
+          
+          <div class="hero-visual">
+            <div class="image-orb">
+              <img src="bikoInventorHero.png" alt="Biko Inventor Hero" fetchpriority="high">
+            </div>
+          </div>
+
+          <p class="hero-description">
+            Laboratorio de bicicletas experimentales y diseños únicos forjados en el corazón de Hurlingham. Transformamos el acero en arte rodante.
+          </p>
+          <div class="hero-actions">
+            <a href="#experimental" class="btn-primary">Ver Inventos</a>
+            <a href="#contact" class="btn-secondary">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interactive-gallery" id="experimental">
       <div class="bg-grid"></div>
       <svg class="hero-patch-small p1" aria-hidden="true" width="60" height="60">
         <use href="#svg-tire"></use>
@@ -242,7 +264,7 @@
             data-desc="Ideal para pasear o llevar 2 niñ@s, a la escuela, de entre de entre 2 a 12 años.">
             <picture>
               <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="800" height="800">
-              <img loading="eager" fetchpriority="high" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro"
+              <img loading="lazy" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro"
                 width="1200" height="800">
             </picture>
           </div>
@@ -250,7 +272,7 @@
             data-desc="Bici reclinada para pedalear semiacostado, más comodidad para largos trayectos.">
             <img src="images/biciReclinada.webp"
               alt="Bici experimental reclinada de color amarilla con diseño aerodinámico" class="hero-first-img"
-              loading="eager" fetchpriority="high" width="800" height="800">
+              loading="lazy" width="800" height="800">
           </div>
           <div class="img-wrapper" data-title="Bici amplio asiento"
             data-desc="Bici con asiento extra ancho para viajar cómodo junto al piloto.">
@@ -318,8 +340,6 @@
             </picture>
           </div>
         </div>
-
-        <!-- La galería sigue igual -->
       </div>
 
       <div class="hero-content" aria-live="polite">
@@ -358,18 +378,19 @@
           </div>
         </div>
       </div>
+    </section>
 
       <nav class="floating-menu" id="floatingMenu">
         <div class="menu-items-container">
           <div class="menu-items" id="menuItems">
             <a href="#home">Inicio</a>
+            <a href="#experimental">Experimental</a>
             <a href="#about">Sobre Mí</a>
             <a href="#portfolio">Portafolio</a>
             <a href="#canguro">Bici Canguro</a>
             <a href="#videos">Videos</a>
             <a href="#blog">Historias</a>
             <a href="#workshop">Taller</a>
-            <a href="#services">Servicios</a>
             <a href="#contact">Contacto</a>
           </div>
         </div>
