@@ -37,7 +37,9 @@
   </noscript>
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="bikoInventorHero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="bikoInventorHero-640.webp"
+    imagesrcset="bikoInventorHero-640.webp 640w, bikoInventorHero.webp 1080w"
+    imagesizes="(max-width: 1023px) 352px, 650px" fetchpriority="high">
 
   <!-- Prefetch next images -->
   <link rel="prefetch" as="image" href="images/biciReclinada.webp">
@@ -276,7 +278,9 @@
 
           <div class="hero-visual">
             <div class="image-orb">
-              <img src="bikoInventorHero.webp" alt="Biko Inventor Hero" width="1080" height="1080"
+              <img src="bikoInventorHero-640.webp"
+                srcset="bikoInventorHero-640.webp 640w, bikoInventorHero.webp 1080w"
+                sizes="(max-width: 1023px) 352px, 650px" alt="Biko Inventor Hero" width="640" height="640"
                 fetchpriority="high">
             </div>
           </div>
@@ -352,7 +356,7 @@
           </div>
           <div class="img-wrapper" data-title="Zulki"
             data-desc="Tipo zulki, como los antiguos coches de campo pero con pedales.">
-            <img loading="lazy" src="images/biciZulkiDESKTOP.webp" alt="Zulki" width="1200" height="800">
+            <img loading="lazy" src="images/biciZulki-450.webp" alt="Zulki" width="450" height="450">
           </div>
           <div class="img-wrapper" data-title="Bici Restaurada"
             data-desc="Bici restaurada y personalizada a gusto del cliente.">
@@ -379,9 +383,10 @@
           <div class="img-wrapper" data-title="Triciclo Asiento"
             data-desc="Triciclo con asiento delantero de lujo, y un acompañante trasero.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/tricicloAsientoMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/tricicloAsientoDESKTOP.webp" alt="Triciclo Asiento" width="1200"
-                height="800">
+              <source media="(max-width: 1023px)" srcset="images/tricicloAsientoMOBILE-450.webp" width="450"
+                height="450">
+              <img loading="lazy" src="images/tricicloAsientoDESKTOP.webp" alt="Triciclo Asiento" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Silla volante"
