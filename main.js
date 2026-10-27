@@ -15,6 +15,11 @@ const techSpecBtn = document.getElementById('techSpecBtn');
 let currentIndex = 0;
 let autoPlayInterval;
 let currentRotation = 0;
+let viewportHeight = window.innerHeight;
+
+window.addEventListener('resize', () => {
+  viewportHeight = window.innerHeight;
+}, { passive: true });
 
 function updateWhatsAppLink(btn, title) {
   if (!btn) return;
@@ -109,7 +114,7 @@ function handleMenuVisibility() {
   }
 
   // Siempre visible en la primera parte (Hero)
-  const isAtTop = window.scrollY < window.innerHeight * 0.8;
+  const isAtTop = window.scrollY < viewportHeight * 0.8;
 
   if (isAtTop) {
     floatingMenu.classList.remove('menu-hidden');
@@ -122,7 +127,7 @@ function handleMenuVisibility() {
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
       // Doble check: no ocultar si el menú se abrió mientras esperábamos
-      if (!floatingMenu.classList.contains('active') && window.scrollY >= window.innerHeight * 0.5) {
+      if (!floatingMenu.classList.contains('active') && window.scrollY >= viewportHeight * 0.5) {
         floatingMenu.classList.add('menu-hidden');
       }
     }, 2500); // 2.5 segundos de inactividad para ocultar

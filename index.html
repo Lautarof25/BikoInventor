@@ -29,11 +29,15 @@
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </noscript>
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="bikoInventorHero.webp">
+  <link rel="preload" as="image" href="bikoInventorHero.webp" fetchpriority="high">
 
   <!-- Prefetch next images -->
   <link rel="prefetch" as="image" href="images/biciReclinada.webp">
@@ -272,7 +276,8 @@
 
           <div class="hero-visual">
             <div class="image-orb">
-              <img src="bikoInventorHero.webp" alt="Biko Inventor Hero" fetchpriority="high">
+              <img src="bikoInventorHero.webp" alt="Biko Inventor Hero" width="1080" height="1080"
+                fetchpriority="high">
             </div>
           </div>
 
@@ -512,7 +517,8 @@
         <div class="about-card">
           <div class="about-image">
             <!-- Espacio para la foto vertical -->
-            <img loading="lazy" src="images/ariel.webp" alt="Sobre Mí" id="about-img" width="400" height="600">
+            <img src="images/ariel.webp" alt="Sobre Mí" id="about-img" width="400" height="600"
+              fetchpriority="high">
           </div>
           <div class="about-content">
             <span class="subtitle">El Creador</span>
@@ -695,46 +701,60 @@
             <div class="gallery-slider">
               <div class="gallery-track">
                 <div class="gallery-slide active">
-                  <img src="images/logoBiciCanguro.webp" alt="Bici Canguro Vista 1">
+                  <img src="images/logoBiciCanguro.webp" alt="Bici Canguro Vista 1" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguroPromo.webp" alt="Bici Canguro Vista 1">
+                  <img src="images/biciCanguroPromo.webp" alt="Bici Canguro Vista 1" width="849" height="849"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro1.webp" alt="Bici Canguro Vista 1">
+                  <img src="images/biciCanguro1.webp" alt="Bici Canguro Vista 1" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro2.webp" alt="Bici Canguro Vista 2">
+                  <img src="images/biciCanguro2.webp" alt="Bici Canguro Vista 2" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro3.webp" alt="Bici Canguro Vista 3">
+                  <img src="images/biciCanguro3.webp" alt="Bici Canguro Vista 3" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro4.webp" alt="Bici Canguro Vista 4">
+                  <img src="images/biciCanguro4.webp" alt="Bici Canguro Vista 4" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro5.webp" alt="Bici Canguro Vista 5">
+                  <img src="images/biciCanguro5.webp" alt="Bici Canguro Vista 5" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro6.webp" alt="Bici Canguro Vista 6">
+                  <img src="images/biciCanguro6.webp" alt="Bici Canguro Vista 6" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro7.webp" alt="Bici Canguro Vista 7">
+                  <img src="images/biciCanguro7.webp" alt="Bici Canguro Vista 7" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro8.webp" alt="Bici Canguro Vista 8">
+                  <img src="images/biciCanguro8.webp" alt="Bici Canguro Vista 8" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro9.webp" alt="Bici Canguro Vista 9">
+                  <img src="images/biciCanguro9.webp" alt="Bici Canguro Vista 9" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro10.webp" alt="Bici Canguro Vista 10">
+                  <img src="images/biciCanguro10.webp" alt="Bici Canguro Vista 10" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro11.webp" alt="Bici Canguro Vista 11">
+                  <img src="images/biciCanguro11.webp" alt="Bici Canguro Vista 11" width="800" height="800"
+                    loading="lazy">
                 </div>
                 <div class="gallery-slide">
-                  <img src="images/biciCanguro12.jpg" alt="Bici Canguro Vista 12">
+                  <img src="images/biciCanguro12.jpg" alt="Bici Canguro Vista 12" width="1080" height="725"
+                    loading="lazy">
                 </div>
               </div>
               <button class="gallery-btn gallery-prev" aria-label="Imagen anterior">
@@ -768,7 +788,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>Ruedas Reforzadas</h4>
+                  <h3>Ruedas Reforzadas</h3>
                   <p>Aros doble pared. R20 (Adelante) / R26 (Atrás).</p>
                 </div>
               </div>
@@ -779,7 +799,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>Frenos V-Brake</h4>
+                  <h3>Frenos V-Brake</h3>
                   <p>Aluminio de alta precisión y respuesta rápida.</p>
                 </div>
               </div>
@@ -791,7 +811,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>6 Velocidades</h4>
+                  <h3>6 Velocidades</h3>
                   <p>Sistema Shimano para trayectos versátiles.</p>
                 </div>
               </div>
@@ -803,7 +823,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>Tracción Total</h4>
+                  <h3>Tracción Total</h3>
                   <p>Geometría optimizada para empuje constante.</p>
                 </div>
               </div>
@@ -815,7 +835,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>Seguridad</h4>
+                  <h3>Seguridad</h3>
                   <p>Cinturones de seguridad adelante y atrás.</p>
                 </div>
               </div>
@@ -827,7 +847,7 @@
                   </svg>
                 </div>
                 <div class="tech-info">
-                  <h4>Confort Playero</h4>
+                  <h3>Confort Playero</h3>
                   <p>Asiento con resortes de alta comodidad.</p>
                 </div>
               </div>

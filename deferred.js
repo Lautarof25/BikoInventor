@@ -88,12 +88,14 @@
     let startX;
     let scrollLeft;
     let isDragging = false;
+    let sliderLeft;
 
     slider.addEventListener('mousedown', (e) => {
+      sliderLeft = slider.getBoundingClientRect().left;
+      startX = e.clientX - sliderLeft;
+      scrollLeft = slider.scrollLeft;
       isDown = true;
       slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
       isDragging = false;
       slider.style.scrollBehavior = 'auto';
     });
@@ -112,7 +114,7 @@
     slider.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
+      const x = e.clientX - sliderLeft;
       const walk = (x - startX) * 2;
       if (Math.abs(walk) > 5) isDragging = true;
       slider.scrollLeft = scrollLeft - walk;
