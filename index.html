@@ -30,16 +30,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=optional"
     onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=optional" rel="stylesheet">
   </noscript>
 
   <!-- Preload LCP image -->
   <link rel="preload" as="image" href="bikoInventorHero-640.webp"
-    imagesrcset="bikoInventorHero-640.webp 640w, bikoInventorHero.webp 1080w"
-    imagesizes="(max-width: 1023px) 352px, 650px" fetchpriority="high">
+    imagesrcset="bikoInventorHero-640.webp 640w, bikoInventorHero-1080.webp 1080w"
+    imagesizes="(max-width: 1023px) 352px, 640px" fetchpriority="high">
 
   <!-- Prefetch next images -->
   <link rel="prefetch" as="image" href="images/biciReclinada.webp">
@@ -128,6 +128,189 @@
       opacity: 0;
       /* Ocultar hasta que cargue el CSS completo */
       pointer-events: none;
+    }
+
+    .hero-main {
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 40px 20px 60px;
+      background-color: #0d0d0d;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+
+    .hero-subtitle {
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      display: block;
+      margin-bottom: -10px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 10vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+      display: block;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      line-height: 1.8;
+      padding: 0 10px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .hero-actions a {
+      width: 100%;
+      max-width: 300px;
+      padding: 14px 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .image-orb {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, var(--primary-glow) 0%, transparent 70%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+      transform: scale(1.05);
+      margin: 0 auto;
+    }
+
+    .image-orb img {
+      width: 110%;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(0.85) contrast(1.1) drop-shadow(0 30px 60px rgba(0, 0, 0, 0.9));
+      z-index: 3;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-main {
+        min-height: 100vh;
+        padding: 40px 20px 80px;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+      }
+
+      .hero-text {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-areas:
+          "subtitle visual"
+          "title visual"
+          "desc visual"
+          "actions visual";
+        text-align: left;
+        align-items: center;
+        gap: 15px 60px;
+      }
+
+      .hero-subtitle {
+        grid-area: subtitle;
+        text-align: left;
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+      }
+
+      .hero-title {
+        grid-area: title;
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        grid-area: desc;
+        text-align: left;
+        max-width: 100%;
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+        padding: 0;
+      }
+
+      .hero-actions {
+        grid-area: actions;
+        justify-content: flex-start;
+        width: auto;
+      }
+
+      .hero-actions a {
+        width: auto;
+        max-width: none;
+        padding: 16px 40px;
+        font-size: inherit;
+      }
+
+      .hero-visual {
+        grid-area: visual;
+        margin: 0;
+      }
+
+      .image-orb {
+        max-width: 500px;
+        margin: 0;
+      }
+
+      .image-orb img {
+        width: 130%;
+      }
     }
   </style>
 
@@ -279,8 +462,8 @@
           <div class="hero-visual">
             <div class="image-orb">
               <img src="bikoInventorHero-640.webp"
-                srcset="bikoInventorHero-640.webp 640w, bikoInventorHero.webp 1080w"
-                sizes="(max-width: 1023px) 352px, 650px" alt="Biko Inventor Hero" width="640" height="640"
+                srcset="bikoInventorHero-640.webp 640w, bikoInventorHero-1080.webp 1080w"
+                sizes="(max-width: 1023px) 352px, 640px" alt="Biko Inventor Hero" width="640" height="640"
                 fetchpriority="high">
             </div>
           </div>
@@ -336,22 +519,24 @@
           <div class="img-wrapper active" data-title="Bici Canguro"
             data-desc="Ideal para pasear o llevar 2 niñ@s, a la escuela, de entre de entre 2 a 12 años.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro" width="1200" height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciCanguroCyanMOBILE.webp" width="526" height="526">
+              <img loading="lazy" src="images/biciCanguroCyanDESKTOP.webp" alt="Bici Canguro" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Bici reclinada"
             data-desc="Bici reclinada para pedalear semiacostado, más comodidad para largos trayectos.">
             <img src="images/biciReclinada.webp"
               alt="Bici experimental reclinada de color amarilla con diseño aerodinámico" class="hero-first-img"
-              loading="lazy" width="800" height="800">
+              loading="lazy" width="480" height="360">
           </div>
           <div class="img-wrapper" data-title="Bici amplio asiento"
             data-desc="Bici con asiento extra ancho para viajar cómodo junto al piloto.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciAsientoAmplioMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciAsientoAmplioDESKTOP.webp" alt="Bici amplio asiento" width="1200"
-                height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciAsientoAmplioMOBILE.webp" width="526"
+                height="526">
+              <img loading="lazy" src="images/biciAsientoAmplioDESKTOP.webp" alt="Bici amplio asiento" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Zulki"
@@ -361,23 +546,23 @@
           <div class="img-wrapper" data-title="Bici Restaurada"
             data-desc="Bici restaurada y personalizada a gusto del cliente.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciRestauradaMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciRestauradaDESKTOP.webp" alt="Bici modificada" width="1200"
-                height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciRestauradaMOBILE.webp" width="526" height="526">
+              <img loading="lazy" src="images/biciRestauradaDESKTOP.webp" alt="Bici modificada" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Bici Doble"
             data-desc="Una bici para dos personas para que el pedaleo sea compartido.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciDobleMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciDobleDESKTOP.webp" alt="Bici Doble" width="1200" height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciDobleMOBILE.webp" width="526" height="526">
+              <img loading="lazy" src="images/biciDobleDESKTOP.webp" alt="Bici Doble" width="526" height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Bici Moto"
             data-desc="Una adaptación de moto pero con la agilidad de bici, lista para rodar!">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciMotoMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciMotoDESKTOP.webp" alt="Bici Moto" width="1200" height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciMotoMOBILE.webp" width="526" height="526">
+              <img loading="lazy" src="images/biciMotoDESKTOP.webp" alt="Bici Moto" width="526" height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Triciclo Asiento"
@@ -392,24 +577,26 @@
           <div class="img-wrapper" data-title="Silla volante"
             data-desc="Silla adelante del piloto para ir volando mientras pedaleas.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/biciSillaVolanteMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/biciSillaVolanteDESKTOP.webp" alt="Silla volante" width="1200"
-                height="800">
+              <source media="(max-width: 1023px)" srcset="images/biciSillaVolanteMOBILE.webp" width="526"
+                height="526">
+              <img loading="lazy" src="images/biciSillaVolanteDESKTOP.webp" alt="Silla volante" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Triciclo canguro"
             data-desc="Triciclo adaptado para tener un acompañante con vista de lujo.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/tricicloCanguroMobile.webp" width="800" height="800">
-              <img loading="lazy" src="images/tricicloCanguroDesktop.webp" alt="Triciclo canguro" width="1200"
-                height="800">
+              <source media="(max-width: 1023px)" srcset="images/tricicloCanguroMobile.webp" width="526"
+                height="526">
+              <img loading="lazy" src="images/tricicloCanguroDesktop.webp" alt="Triciclo canguro" width="526"
+                height="526">
             </picture>
           </div>
           <div class="img-wrapper" data-title="Tricicleta"
             data-desc="Triciclo con amplia estabilidad, para dos niñ@s y protegidos de la lluvia.">
             <picture>
-              <source media="(max-width: 1023px)" srcset="images/tricicletaMOBILE.webp" width="800" height="800">
-              <img loading="lazy" src="images/tricicletaDESKTOP.webp" alt="Tricicleta" width="1200" height="800">
+              <source media="(max-width: 1023px)" srcset="images/tricicletaMOBILE.webp" width="526" height="526">
+              <img loading="lazy" src="images/tricicletaDESKTOP.webp" alt="Tricicleta" width="526" height="526">
             </picture>
           </div>
         </div>
@@ -522,7 +709,7 @@
         <div class="about-card">
           <div class="about-image">
             <!-- Espacio para la foto vertical -->
-            <img src="images/ariel.webp" alt="Sobre Mí" id="about-img" width="400" height="600"
+            <img src="images/ariel.webp" alt="Sobre Mí" id="about-img" width="566" height="886"
               fetchpriority="high">
           </div>
           <div class="about-content">
@@ -611,8 +798,8 @@
                 <button type="button" class="tab-btn" id="btnShowTech">Ficha Técnica</button>
               </div>
               <div class="viewer-image" id="portfolioImageContainer">
-                <img loading="lazy" id="portfolioMainImg" src="images/biciCanguroCyan.webp" alt="Bici Canguro"
-                  width="800" height="800">
+                <img loading="lazy" id="portfolioMainImg" src="images/biciCanguroCyan-optimized.webp"
+                  alt="Bici Canguro" width="480" height="270">
               </div>
               <div class="viewer-tech" id="portfolioTech" style="display: none;">
                 <ul class="tech-list-simple">
@@ -636,45 +823,45 @@
           <div class="viewer-thumbnails">
             <div class="thumb-item active" data-title="Bici canguro"
               data-desc="Ideal para pasear o llevar 2 niñ@s, a la escuela, de entre de entre 2 a 12 años."
-              data-img="images/biciCanguroCyan.webp">
-              <img loading="lazy" src="images/biciCanguroCyanMini.webp" alt="Miniatura de Bici canguro Cyan" width="150"
+              data-img="images/biciCanguroCyan-optimized.webp">
+              <img loading="lazy" src="images/biciCanguroCyanMini.webp" alt="Miniatura de Bici canguro Cyan" width="267"
                 height="150">
             </div>
             <div class="thumb-item" data-title="Asiento amplio"
               data-desc="Bicicleta experimental con estructura reforzada, diseño urbano y geometría personalizada para alto rendimiento."
               data-img="images/biciAsientoAmplio.webp">
               <img loading="lazy" src="images/biciAsientoAmplioMini.webp" alt="Miniatura de Bici asiento amplio"
-                width="150" height="150">
+                width="200" height="150">
             </div>
             <div class="thumb-item" data-title="Triciclo asiento"
               data-desc="Prototipo de alta resistencia con acabados en negro mate y detalles industriales optimizados para la ciudad."
-              data-img="images/tricicloAsientoMOBILE.webp">
+              data-img="images/tricicloAsientoMOBILE-450.webp">
               <img loading="lazy" src="images/tricicloAsientoMini.webp" alt="Miniatura de Bici asiento volante"
                 width="150" height="150">
             </div>
 
             <div class="thumb-item" data-title="Tipo Zulki"
               data-desc="Diseño vanguardista con integración de componentes ligeros y durabilidad extrema."
-              data-img="images/biciZulki.webp">
+              data-img="images/biciZulki-450.webp">
               <img loading="lazy" src="images/biciZulkiMini.webp" alt="Miniatura de Bici zulki" width="150"
                 height="150">
             </div>
             <div class="thumb-item" data-title="Reclinada"
               data-desc="Personalización absoluta: geometría adaptada a la fisonomía del usuario para máximo confort."
               data-img="images/biciReclinada.webp">
-              <img loading="lazy" src="images/biciReclinadaMini.webp" alt="Miniatura de Bici reclinada" width="150"
+              <img loading="lazy" src="images/biciReclinadaMini.webp" alt="Miniatura de Bici reclinada" width="200"
                 height="150">
             </div>
             <div class="thumb-item" data-title="Bici doble"
               data-desc="Estética 'Biko' pura: el equilibrio perfecto entre arte industrial y transporte eficiente."
               data-img="images/biciDoble.webp">
-              <img loading="lazy" src="images/biciDobleMini.webp" alt="Miniatura de Bici doble" width="150"
+              <img loading="lazy" src="images/biciDobleMini.webp" alt="Miniatura de Bici doble" width="203"
                 height="150">
             </div>
             <div class="thumb-item" data-title="Reclinada 2"
               data-desc="Desarrollo de cuadros livianos con soldaduras reforzadas invisibles."
               data-img="images/biciReclinada2.webp">
-              <img loading="lazy" src="images/biciReclinada2Mini.webp" alt="Miniatura de Bici reclinada 2" width="150"
+              <img loading="lazy" src="images/biciReclinada2Mini.webp" alt="Miniatura de Bici reclinada 2" width="266"
                 height="150">
             </div>
             <div class="thumb-item" data-title="Bici Moto"
@@ -691,7 +878,7 @@
             <div class="thumb-item" data-title="Bici Doble 2"
               data-desc="Testeo de resistencia extrema: probada en las condiciones más exigentes."
               data-img="images/biciDoble2.webp">
-              <img loading="lazy" src="images/biciDoble2Mini.webp" alt="Miniatura de Bici Doble 2" width="150"
+              <img loading="lazy" src="images/biciDoble2Mini.webp" alt="Miniatura de Bici Doble 2" width="238"
                 height="150">
             </div>
           </div>
@@ -979,8 +1166,8 @@
         <div class="blog-grid">
           <article class="blog-post">
             <div class="post-img">
-              <img loading="lazy" src="images/biciDiscapacitado.webp" alt="Bici para discapacitados" width="600"
-                height="400">
+              <img loading="lazy" src="images/biciDiscapacitado.webp" alt="Bici para discapacitados" width="640"
+                height="480">
               <div class="date"><span>15</span> ENE</div>
             </div>
             <div class="post-content">
@@ -1010,7 +1197,7 @@
 
           <article class="blog-post">
             <div class="post-img">
-              <img loading="lazy" src="images/biciTriple.webp" alt="Bici para 3 personas" width="600" height="400">
+              <img loading="lazy" src="images/biciTriple.webp" alt="Bici para 3 personas" width="800" height="600">
               <div class="date"><span>02</span> FEB</div>
             </div>
             <div class="post-content">
@@ -1038,7 +1225,7 @@
 
           <article class="blog-post">
             <div class="post-img">
-              <img loading="lazy" src="images/biciAuto.webp" alt="Bici auto" width="600" height="400">
+              <img loading="lazy" src="images/biciAuto.webp" alt="Bici auto" width="1280" height="720">
               <div class="date"><span>20</span> DIC</div>
             </div>
             <div class="post-content">
@@ -1067,7 +1254,7 @@
           <article class="blog-post">
             <div class="post-img">
               <img loading="lazy" src="images/biciAsientoAmplioDoble.webp" alt="Bici para llevar niños a la escuela"
-                width="600" height="400">
+                width="709" height="704">
               <div class="date"><span>08</span> FEB</div>
             </div>
             <div class="post-content">
@@ -1116,7 +1303,7 @@
         <div class="workshop-grid">
           <div class="workshop-main">
             <div class="workshop-img-large">
-              <img loading="lazy" src="images/tallerCompleto2.webp" alt="Taller Biko" width="800" height="533">
+              <img loading="lazy" src="images/tallerCompleto2.webp" alt="Taller Biko" width="540" height="540">
               <div class="workshop-caption">
                 <h3>Visión General</h3>
                 <p>Cada rincón del taller está diseñado para la experimentación y el perfeccionamiento técnico.</p>
@@ -1133,45 +1320,45 @@
                 que desafían lo convencional.</p>
             </div>
             <div class="workshop-gallery-mini">
-              <div class="mini-img"><img loading="lazy" src="images/tallerBocetoBici.webp" alt="Boceto" width="200"
-                  height="150"></div>
+              <div class="mini-img"><img loading="lazy" src="images/tallerBocetoBici.webp" alt="Boceto" width="1080"
+                  height="1080"></div>
               <div class="mini-img"><img loading="lazy" src="images/tallerBiciArmadoSoldadura.webp" alt="Soldadura"
-                  width="200" height="150">
+                  width="480" height="640">
               </div>
               <div class="mini-img"><img loading="lazy" src="images/tallerCuadroBiciPintura.webp" alt="Pintura"
-                  width="200" height="150"></div>
-              <div class="mini-img"><img loading="lazy" src="images/tallerCompleto.webp" alt="Taller" width="200"
-                  height="150"></div>
+                  width="540" height="540"></div>
+              <div class="mini-img"><img loading="lazy" src="images/tallerCompleto.webp" alt="Taller" width="427"
+                  height="427"></div>
             </div>
           </div>
         </div>
 
         <div class="workshop-details-grid">
           <div class="detail-item">
-            <img loading="lazy" src="images/tallerCuadrosBicisSoldados.webp" alt="Cuadros soldados" width="400"
-              height="300">
+            <img loading="lazy" src="images/tallerCuadrosBicisSoldados.webp" alt="Cuadros soldados" width="540"
+              height="540">
             <div class="detail-info">
               <h4>Estructuras Reforzadas</h4>
               <p>Soldaduras precisas que garantizan durabilidad extrema.</p>
             </div>
           </div>
           <div class="detail-item">
-            <img loading="lazy" src="images/tallerArmadoAsientoBici.webp" alt="Armado de asiento" width="400"
-              height="300">
+            <img loading="lazy" src="images/tallerArmadoAsientoBici.webp" alt="Armado de asiento" width="540"
+              height="540">
             <div class="detail-info">
               <h4>Ergonomía Personalizada</h4>
               <p>Ajustamos cada componente a la fisonomía del usuario.</p>
             </div>
           </div>
           <div class="detail-item">
-            <img loading="lazy" src="images/tallerBiciMotor.webp" alt="Motorización" width="400" height="300">
+            <img loading="lazy" src="images/tallerBiciMotor.webp" alt="Motorización" width="540" height="540">
             <div class="detail-info">
               <h4>E-Bike Conversion</h4>
               <p>Integración de sistemas eléctricos en cuadros experimentales.</p>
             </div>
           </div>
           <div class="detail-item">
-            <img loading="lazy" src="images/tallerBicisTerminadas.webp" alt="Terminadas" width="400" height="300">
+            <img loading="lazy" src="images/tallerBicisTerminadas.webp" alt="Terminadas" width="540" height="540">
             <div class="detail-info">
               <h4>Listas para Rodar</h4>
               <p>El resultado final: máquinas únicas listas para la calle.</p>
